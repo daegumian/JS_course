@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        //선언적 함수
+
+        이름(); //호이스팅 - 선언적함수에서만 가능 -> 선언이 밑에 있어도 가능하다.
+        var result = func(1,2);
+        console.log(result);
+
+
+        function 이름( ){ /* 다시한번 말하지만 함수는 호출하지 않으면 호출되지 않는다ㅋㅋ */
+            console.log('함수 호출');
+        }
+
+        function func(a,b) { //매개변수
+            return a + b; //리턴이 필요하면 적으면 된다           
+        }
+
+        //함수를 변수에 저장할 수 있따!!! jS의 아주 큰 기능쓰!!!!
+        var a = func; /* ()를 적으면 호출이 된다. */
+
+        var result = a(1,2);
+        console.log(result,'<-함수를 변수 a에 저장해서 호출한 결과');
+
+
+
+        
+
+
+        
+
+
+
+    </script>
+
+    
+</body>
+</html>

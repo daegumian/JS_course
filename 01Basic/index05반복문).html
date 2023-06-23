@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        var a = 1;
+        while (a <= 10) {
+            console.log(a);
+            a++;
+        }
+
+        console.log('----------------------');
+
+        for (var i = 1; i <= 10; i++) {
+            console.log(i);
+        }
+
+        console.log('----------------------');
+
+        var arr = [1, 2, 3, 4, 5];
+        for (var i = 0; i < arr.length; i++) {
+            console.log(arr[i]);
+        }
+
+        console.log('----------------------');
+
+        //빈 배열에 1~10까지 값을 저장
+        //var arr = new Array(10); <--길이 고정 배열
+
+        var arr2 = []; /* var arr2 = [] */
+
+        for (var i = 1; i <= 10; i++) {
+            arr2[i - 1] = i;
+        }
+        console.log(arr2)
+
+        var arr3 = new Array(0);
+        for (var i = 1; i <= 10; i++) {
+            arr3.push(i);
+        }
+        console.log(arr3)
+
+        console.log('----------------------');
+        //혼자서 구구단해봄!
+        /* for(var i = 2; i < 10; i++){
+            console.log('구구단',i,'단')
+                console.log('---------------')
+            for(var k = 1; k < 10; k++){
+                console.log(i, ' * ', k, ' = ', i*k)
+                
+            }
+        }
+        console.log('---------------') */
+
+        //향상된 for문에서는 인덱스를 i에 담는다.
+        for (var i in arr) { //1~10까지
+            console.log('인덕스:', i);
+            console.log('값:', arr[i]);
+        }
+
+        var obj = { '1': '박동훈', '2': '이시형' }; //자바의 map == JS 객체
+        for (var i in obj) {
+            console.log(i); //키가 출력됨.
+            console.log(obj[i]); //값이 출력됨.
+        }
+
+        //탈출문 break,continue
+
+        for (var i = 1; i <= 10; i++) {
+
+            if (i === 3) {
+                //break;
+                continue;
+            }
+            console.log(i);
+        }
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

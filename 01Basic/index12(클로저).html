@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+
+        //렉시컬 스코프 - 함수의 선언위치에 따라서 사용하는 변수가 달라진다.
+        //나랑 가장 가까운 변수를 가져다 쓴다.
+
+        /* var a = 1;
+        function func1(){
+            a = 10;
+            console.log(a); //10
+        }
+        func1(); */
+
+
+        /* var b = 1;//전역변수
+        function func2(){
+            var b = 10;
+            func3();
+        }
+
+        function func3(){
+            console.log(b); //1 전역변수 b 사용
+        }
+        func2();
+         */ 
+
+
+        /* var c = 1;  
+        function func4(){
+            var c = 10;
+            
+            func5();
+            function func5(){
+                console.log(c); //10
+            }
+        }
+
+        func4(); */
+
+        //클로저 - 내부함수의 렉시컬 스코프를 이용해서, 외부에서 변수 a를 접근할 수 있는 환경을 만들어준다. = 자바에서 private를 만들어 getter/setter를 이용해서 끌어오는 개념과 같다.
+
+        function example(){
+
+            var a = 1;
+
+            /* var x = function () {
+                return a;
+            }
+            return x; *///아래의 방법과 같은 방법.
+            return function(){
+                return a;
+            }
+
+        }// a 수명은 여기서 끝 //함수 안에서 만든 것은 지역변수 이기 때문에 당연
+
+        var result = example(); //exaple() 반환은 함수
+
+        var result2 = result();
+        console.log(result2) //a값 return된 함수가 기억하고 있다. 그 함수가 a값을 계속 가지고 있다.
+
+        console.log('---------------------------------------------------');
+
+        // var count = 0;
+        // ++count;
+        // count = '홍길동' //에러발생
+        // ++count;
+        // console.log(count);
+
+        // var compute = function (){
+
+        //     var count = 0;
+        //     return ++count;
+        // }
+        // console.log( compute())
+        // console.log( compute())
+        // console.log( compute())
+        // console.log( compute())
+        // console.log( compute())
+
+        //클로저를 이용한 getter
+        var compute = function(){
+            var count = 0;
+
+            return function(){
+                return ++count;
+            }
+        }
+
+        var x = compute();
+        console.log(x)  
+        
+        console.log(x());
+        console.log(x());
+        console.log(x());
+        console.log(x());
+        console.log(x());
+
+
+
+
+    </script>
+
+
+
+
+</body>
+</html>

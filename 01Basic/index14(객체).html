@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        //JS에서 객체는 {}로 표기하고, 자바의 맵과 같다
+
+        var person = {name: '박동훈', age : 20, arr : [1,2,4]}; /* 키:값,키:값,키:값... 형식 */
+
+        console.log(typeof person); //object(객체)
+
+        //JS에서 {}에 접근하는 방식은 2가지가 있다.
+        // . 으로 접근
+        console.log( person.name );
+        console.log( person.age  );
+        console.log( person.arr  );
+        console.log( person.arr[0]  );//arr의 0번째 index
+
+        //객체['키:']
+        console.log(person['name']);/* 키를 문자열로 넣어서 확인 */
+        console.log(person['age']);
+        console.log(person['arr']);
+        console.log(person['arr'][0]);
+
+        //객체안에 객체
+        var exam = {kor : 30, eng: 40};
+        var park = {name : '박수', age : 20, exam : exam};
+
+        console.log(park['exam']);
+        console.log(park['exam']['kor']);
+
+        //객체안에 함수
+        var obj = {func: function(){console.log('호출됨')}};
+
+        // obj['func']();
+        obj.func();
+
+        //리스트 안에 객체
+        var arr = [
+            {id: 1, name: '박동훈'},
+            {id: 2, name: '신지은'},
+            {id: 3, name: '백임자'}
+        ];
+
+        console.log(arr);
+        //반복문으로 id와 name을 출력.
+
+        //1st
+        for(var i = 0; i < arr.length; i++){
+            // console.log(arr[i].id);
+            console.log(arr[i]['id']+'번 이름은 : '+arr[i]['name']);
+            // console.log(arr[i]['name']);
+        }
+
+        //2st
+        for(var x in arr){
+            console.log( arr[x]['id'] );
+            console.log( arr[x]['name'] );
+        }
+
+
+
+
+
+
+
+
+    </script>
+
+    
+</body>
+</html>

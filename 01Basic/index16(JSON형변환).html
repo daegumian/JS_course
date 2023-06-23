@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        //원격의 컴퓨터(서버)와 데이터를 주고 받을 때 JSON표기형식을 사용한다.
+        
+        var data = [
+            {id:'kkk123', title: '안녕하세요!', age: 10},
+            {id:'aaa123', title: 'ah!', age: 20},
+            {id:'bbb123', title: 'good', age: 20},
+            ]
+        
+        //data를 전달할 때 반드시 문자열 이어야 한다.
+        //객체 => JSON 문자열로 변경 (숫자 빼도 키와 값을 ""로 묶어준다)
+        var result = JSON.stringify(data);
+
+        console.log(result);
+
+        //JSON 문자열 => 객체
+        var obj = JSON.parse(result);
+        console.log(obj);
+
+        //
+        var exam = '{"id" : "박동훈"}';
+        
+        JSON.parse(exam);
+
+
+    </script>
+    
+</body>
+</html>
