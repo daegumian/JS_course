@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p class="title"></p>
+
+    <ul class="box">
+        <li>1. 동훈</li>
+        <li>2. 강유</li>
+        <li>3. 관우</li>
+        <li>4. 조조</li>
+        <li>5. 마초</li>
+    </ul>
+
+    <script>
+        var title = document.querySelector(".title");
+
+        var box = document.querySelector(".box"); //UL
+        box.onclick = function(){
+            // console.log('이벤트 위임');
+            // console.log(this);//UL
+
+            // console.log(event.target);//이벤트가 동작한 태그
+            // console.log(event.currentTarget);//실제로 이벤트가 걸려있는 태그
+
+            // console.dir(event.target.tagName);//이벤트가 동작한 태그명
+
+            if(event.target.tagName != "LI"){
+                return;
+            }
+            
+            title.innerHTML = event.target.innerHTML;
+
+
+
+        }
+
+    </script>
+
+
+    
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>자바스크립트 카운트(innerHTML value 속성을 이용해서 카운트처리하세요)</h2>
+    <h3>필요한 속성을 추가해도 됩니다</h3>
+    <input type="number" value="0" id="num">
+    <button id="btn1" >+</button>
+
+    <button id="btn2" >-</button>
+
+    <script>
+        var num = document.getElementById("num");
+        var count1 = document.getElementById("btn1");
+        var count2 = document.getElementById("btn2");
+
+        count1.onclick = function(){
+            num.value++;
+        }
+        count2.onclick = function(){
+            num.value--;
+            if(num.value <= 0){
+                num.value = 0;
+                alert('0보다 작을 순 없습니다.')
+            }
+        }
+    </script>
+
+
+    <!-- 쌤 -->
+
+    <h2>자바스크립트 카운트(innerHTML value 속성을 이용해서 카운트처리하세요)</h2>
+    <h3>필요한 속성을 추가해도 됩니다</h3>
+    <input type="number" value="0" id="number">
+    <button class="a" onclick="add(this)" >+</button>
+
+    <button class="b" onclick="add(this)" >-</button>
+
+    <script>
+        var num = document.querySelector("#num");
+
+        function add(a){
+            
+
+            if(a.innerHTML == "+"){
+                number.value++;
+            }else{
+                
+                if(number.value <= 0 ){
+                    alert("0보다 작을 순 없습니다.")
+                    return; //return false;
+                }
+                number.value--;
+            }
+
+        }
+
+
+        // var a = document.querySelector(".a");
+        // a.addEventListener('click', function(){
+        //     number.value++;
+        // })
+        
+        //마이너스인 경우 하나 더 만들면 됨~ + 0이하 경고문도!
+
+
+    </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h3>할일 목록 만들기</h3>
+
+    <form class="myForm"> <!-- myForm태그를 들고 가면 그 myForm 태그 안에서만 search한다. -->
+
+        <h3 class="nameTitle"></h3>
+        <input type="text" placeholder="이름을 입력하세요" class="nameInput">
+        <button type="button" id="nameBtn">확인</button> <!-- form태그 안에 있을땐 버튼에 자동으로 submit을 넘긴다 -> type="button"해줘야한다 -->
+    </form>
+
+    <form class="todoForm">
+        <input type="text" placeholder="당신의 할일을 적으세요" class="todoInput">
+        <button type="button" id="todoBtn">확인</button><!-- form태그 안에 있을땐 버튼에 자동으로 submit을 넘긴다 -> type="button"해줘야한다 -->
+
+        <ul class="todoList">
+        </ul>
+    </form>
+
+    <script>
+        var myForm = document.querySelector(".myForm");//이렇게 불러올 수 있다.
+
+        var nameTitle = myForm.querySelector('.nameTitle');
+        var nameInput = myForm.querySelector('.nameInput');
+        var nameBtn = myForm.querySelector('#nameBtn');
+
+        nameBtn.addEventListener('click', function () {
+
+            nameTitle.innerHTML = nameInput.value + '님 안녕하세요!';
+            nameTitle.value = ''; //값을 공백
+            nameInput.style.display = 'none';
+            nameBtn.style.display = 'none';
+        })
+
+        /////////////////////////////////////////
+
+        var todoForm = document.querySelector(".todoForm");
+
+        var todoInput = todoForm.querySelector(".todoInput");
+        var todoList = todoForm.querySelector(".todoList");
+        var todoBtn = todoForm.querySelector("#todoBtn");
+        todoBtn.addEventListener('click', function () {
+
+            var text = todoInput.value; //값
+            todoInput.value = ''; //공백
+
+            var li = document.createElement("li");
+            li.innerHTML = text;
+
+            var button = document.createElement('button');
+            button.innerHTML = 'x'
+            button.type = 'button';
+
+            //button이 동적으로 생성될 때 (인라인ok, 기본ok, 표준ok)
+            button.onclick = del;
+
+            li.appendChild(button);
+            todoList.appendChild(li);
+
+            //up
+            var button = document.createElement('button');
+            button.innerHTML = '↑';
+            button.type = 'button';
+            button.onclick = up;
+            li.appendChild(button); //근데 왜 여기에 (this)를 쓸 수 없는가??
+            todoList.appendChild(li);
+
+            //down
+            var button = document.createElement('button');
+            button.innerHTML = '↓'
+            button.type = 'button';
+            button.onclick = down;
+            li.appendChild(button);
+            todoList.appendChild(li);
+
+        })
+
+        //삭제
+        function del() {
+            if(confirm('정말 삭제하시겠습니까?') == false){//yes누르면 true반환, no 누르면 false
+                return;
+            }
+            this.parentElement.remove();
+        }
+
+        //up
+        function up(){
+
+            console.log(this) //this확인
+
+            if(confirm('이동하시겠습니까?') == false){//yes누르면 true반환, no 누르면 false
+                return;
+            }
+
+            var current = this.parentElement;//tr
+            var prev = current.previousElementSibling;//이전 행
+
+            if( prev === null){
+                alert("가장 처음 행입니다.")
+                return;
+            }
+
+            // console.log(current, prev);
+            todoList.insertBefore(current, prev);
+            
+        }
+
+        //down
+        function down(){
+            console.log(this) //this확인
+
+            if(confirm('이동하시겠습니까?') == false){//yes누르면 true반환, no 누르면 false
+                return;
+            }
+
+            var current = this.parentElement;//tr
+            var next = current.nextElementSibling;;//이전 행
+
+            if( next === null){
+                alert("가장 마지막 행입니다.")
+                return;
+            }
+
+            // console.log(current, prev);
+            todoList.insertBefore(next, current);
+        }
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h3 class="stopTimeout">여기를 누르면 경고창이 나오지 않음</h3>
+
+
+    
+    <script>
+
+        //setInterval 사용방법이랑 동일함
+        /* var stop = setTimeout(function(a){
+
+            alert('그만자그레이!');
+
+        }, 5000); */
+
+        var stopTimeout = document.querySelector(".stopTimeout");
+        stopTimeout.addEventListener('click', function(){
+
+            clearTimeout(stop);
+            alert('중지 되었습니다.')
+
+        })
+
+        //여러분의 동심을 제가 파괴
+
+        /* setTimeout(test('hello world'), 5000); //실행 안됨. //즉시 실행이 되어버림.
+        function test(x) {
+                alert('이거 타이밍 펑션이야' + x)   ;         
+        } */
+
+        /* setTimeout( test('hello'), 5000);
+        function test(x) {
+            return function() {
+                alert('이거 타이밍 펑션이야' + x)   ;         
+            }
+        } */
+
+        setTimeout( test, 5000, 'hello'); //이것도 됨
+        function test(x) {
+                alert('이거 타이밍 펑션이야' + x)   ;         
+            }
+
+
+
+
+    </script>
+
+
+
+</body>
+</html>

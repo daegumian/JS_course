@@ -26,12 +26,10 @@
         var obj = JSON.parse(result);
         console.log(obj);
 
-        //
+        //JSON문자열을 표기할 때 엄격한 규칙 => 숫자를 제외한 키 값은 반드시 ""로 묶여야함.
         var exam = '{"id" : "박동훈"}';
         
         JSON.parse(exam);
-
-
     </script>
     
 </body>

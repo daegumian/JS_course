@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h3>태그에 속성을 얻을 때는 . 을 사용한다.</h3>
+
+    <input type="checkbox" name="xx" value="1" onclick="check(this)">항목1
+    <input type="checkbox" name="xx" value="2" onclick="check(this)">항목2
+    <input type="checkbox" name="xx" value="3" onclick="check(this)">항목3
+    <input type="checkbox" name="xx" value="4" onclick="check(this)">항목4
+
+    <script>
+        function check(a){
+            console.log(a)
+            // console.log(a.속성명) //a에 있는 값이 무엇인지 잘 알아야한다.
+            // console.log(a.type);
+            // console.log(a.name);
+            // console.log(a.value);
+            alert(a.value + "항목에 동의했습니다.")
+        }
+    </script>
+    
+</body>
+</html>

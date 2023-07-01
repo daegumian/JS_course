@@ -8,7 +8,6 @@
 <body>
 
     <script>
-
         //JS에서 객체는 {}로 표기하고, 자바의 맵과 같다
 
         var person = {name: '박동훈', age : 20, arr : [1,2,4]}; /* 키:값,키:값,키:값... 형식 */
@@ -28,9 +27,9 @@
         console.log(person['arr']);
         console.log(person['arr'][0]);
 
-        //객체안에 객체
+        //객체 안에 객체
         var exam = {kor : 30, eng: 40};
-        var park = {name : '박수', age : 20, exam : exam};
+        var park = {name : '박수', age : 20, exam : exam}; //객체 안에 객체 가능
 
         console.log(park['exam']);
         console.log(park['exam']['kor']);
@@ -63,14 +62,6 @@
             console.log( arr[x]['id'] );
             console.log( arr[x]['name'] );
         }
-
-
-
-
-
-
-
-
     </script>
 
     

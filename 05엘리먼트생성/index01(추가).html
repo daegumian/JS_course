@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box1">
+        <p>기존에 존재하던 태그</p>
+    </div>
+    <button id="btn">innerHTML</button>
+    
+    <script>
+        var box1 = document.querySelector(".box1");
+        var btn = document.getElementById("btn");
+        btn.onclick = function(){
+            box1.innerHTML = '기존에 있던 태그는 지워집니다.'
+        }
+    </script>
+
+    <hr/>
+
+    <div class="box2">
+        <!-- <input type="checkbox" name="aaa" class="bbb" checked> -->
+    </div>
+    <button id="btn2">innerHTML2</button>
+
+    <script>
+        var box2 = document.querySelector(".box2");
+        var btn2 = document.getElementById("btn2");
+        btn2.onclick = function(){
+            box2.innerHTML = '<input type="checkbox" name="aaa" class="bbb" checked>체크박스1'; //아주 많이 쓰인다.
+        }
+
+    </script>
+    <hr/>
+
+    <div class="box3"></div>
+    <button id="btn3">innerHTML2</button>
+
+    <script>
+        var box3 = document.querySelector(".box3");
+        var btn3 = document.getElementById("btn3");
+        btn3.onclick = function(){
+            var sum = "";
+            for(var i = 0; i < 10; i++){
+                sum += '<input type="checkbox" name="aaa" class="bbb">체크박스'+i+' ';
+            }
+            box3.innerHTML = sum;
+        }
+    </script>
+</body>
+</html>

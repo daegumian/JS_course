@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style type="text/css">
+        .center {
+            text-align: center;
+        }
+
+        .content {
+            overflow: hidden;
+            border: 1px solid #777;
+        }
+
+        .content,
+        .content .left,
+        .content .right {
+            width: 50%;
+            margin: 0 auto;
+            box-sizing: border-box;
+            padding: 5px;
+        }
+
+        .content .right,
+        .content .left {
+            float: left;
+        }
+
+        .left .inner,
+        .right .inner {
+            border: 1px solid #777;
+            height: 300px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!--스크립트를 싹 지우고 버튼에 2개로 변경합니다-->
+    <header>
+        <div class="center">
+            <h2>토글형태 활용하기</h2>
+            <button id="btn1" class="dark">어둡게보기</button>
+            <button id="btn2" class="name">이름보기</button>
+            <!-- <button id="btn3" class="write">메모장모드</button> -->
+
+            <!--추가-->
+            <hr>
+        </div>
+    </header>
+
+    <section>
+        <div class="content">
+            <div class="left">
+                <div class="inner"><img src="/img/member8.jpg"></div>
+            </div>
+            <div class="right">
+                <div class="inner2">
+                    <div class="hidden">
+                        <p>김태리 인스타그램</p>
+                        <a href="https://www.instagram.com/kimtaeri_official/" id="wiki">바로가기</a>
+                    </div>
+                </div>
+
+                <div class="inner2 hide" style="display: none;"> <!-- 이게 안보였다가 보였다가(display:none;) -->
+                    <p>'능력 : 이쁨'</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!--     <script>
+
+        var btn1 = document.getElementById("btn1");
+        var wiki = document.getElementById("wiki");
+        btn1.onclick = function () {
+            if (btn1.innerHTML == '다크모드') {
+                btn1.innerHTML = '밝은모드';
+            } else {
+                btn1.innerHTML = '다크모드';
+            }
+
+            if (btn1.classList.contains('a')) {
+                btn1.classList.remove('a');
+                document.body.style.backgroundColor = 'white';
+                document.body.style.color = 'black';
+                wiki.style.color = 'black';
+            } else {
+                btn1.classList.add('a');
+                document.body.style.backgroundColor = 'black';
+                document.body.style.color = 'white';
+                wiki.style.color = 'white';
+            }
+        }
+        var hidden = document.querySelector(".hidden");
+
+        var inner2 = document.querySelector(".inner2");
+        var btn2 = document.getElementById("btn2");
+
+
+
+        btn2.addEventListener('click', function () {
+            if (btn2.innerHTML == '이름보기') {
+                btn2.innerHTML = '내용보기';
+            } else {
+                btn2.innerHTML = '이름보기';
+            }
+
+            if(inner2.classList.contains('hidden1')){
+                var hidden = document.querySelector(".hidden")
+                hidden.remove();
+
+                inner2.classList.remove('hidden1')
+
+                var div = document.createElement("div");
+                var p = document.createElement("p");
+                div.classList.add('hidden');
+                p.innerHTML = '김태리 인스타그램' + '<a href="https://www.instagram.com/kimtaeri_official/" id="wiki">바로가기</a>';
+                div.appendChild(p);
+                inner2.appendChild(div);
+                
+            }else{
+                var hidden = document.querySelector(".hidden")
+                hidden.remove();
+                console.log(hidden)
+
+                inner2.classList.add('hidden1')
+                
+                var div = document.createElement("div");
+                var p = document.createElement("p");
+                div.classList.add('hidden');
+                p.innerHTML = '능력 : 이쁨';
+                div.appendChild(p);
+                inner2.appendChild(div);
+            }
+        })
+
+    </script> -->
+
+    <!-- 쌤 -->
+
+    <script>
+        var tags = document.querySelectorAll("h2, p, a"); //tags에 배열로 저장된다.
+        var body_tag = document.body;
+
+        var btn1 = document.getElementById("btn1");
+        btn1.onclick = function () {
+
+            if (btn1.className == 'dark') {
+                //흰색
+                body_tag.style.backgroundColor = "white";
+                for (var i = 0; i < tags.length; i++) {
+                    tags[i].style.color = "black";
+                }
+
+            } else {
+                //검은색
+                body_tag.style.backgroundColor = "black";
+                for (var i = 0; i < tags.length; i++) {
+                    tags[i].style.color = "white";
+                }
+            }
+            btn1.classList.toggle("dark");
+        }
+
+        var inner2 = document.querySelector(".inner2");
+        var hide = document.querySelector(".hide")
+
+        var btn2 = document.getElementById("btn2");
+        btn2.onclick = function () {
+
+            if (btn2.className == 'name') {
+                //이름보기로 변환
+                inner2.style.display = 'none';
+                hide.style.display = 'block';
+
+            } else {
+                //내용보기로 변환
+                inner2.style.display = 'block';
+                hide.style.display = 'none';
+
+            }
+            btn2.classList.toggle('name');
+        }
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

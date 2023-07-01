@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        /* //원격의 컴퓨터(서버)와 데이터를 주고 받을 때 JSON표기형식을 사용한다.
+       
+        var data = [
+           {id:'kkk123', title: '안녕하세요!', age: 10},
+           {id:'aaa123', title: 'ah!', age: 20},
+           {id:'bbb123', title: 'good', age: 20},
+           ]
+       
+       //data를 전달할 때 반드시 문자열 이어야 한다.
+       //객체 => JSON 문자열로 변경 (숫자 빼고 키와 값을 ""로 묶어준다)
+       var result = JSON.stringify(data);
+
+       console.log(result);
+
+       //JSON 문자열 => 객체
+       var obj = JSON.parse(result);
+       console.log(obj);
+
+       //JSON문자열을 표기할 때 엄격한 규칙 => 숫자를 제외한 키 값은 반드시 ""로 묶여야함.
+       var exam = '{"id" : "박동훈"}';
+       
+       JSON.parse(exam); */
+
+    </script>
+
+    <h3>
+        예약버튼 클릭시 좌석이 최소한개이상 체크되어있지 않다면 <br>
+        경고창을 띄우는 코드를 작성하세요.<br>
+        또한 체크된 태그의 값은 JSON형태의 문자열로 포장해보세요
+    </h3>
+
+    <form>
+        좌석:
+        <input type="checkbox" name="seat" value="1">1
+        <input type="checkbox" name="seat" value="2">2
+        <input type="checkbox" name="seat" value="3">3
+        <input type="checkbox" name="seat" value="4">4
+        <input type="checkbox" name="seat" value="5">5
+        <input type="checkbox" name="seat" value="6">6
+        <input type="checkbox" name="seat" value="7">7
+
+        <br>
+        <button type="button" id="btn">예약</button>
+    </form>
+
+
+    <script>
+
+        var seat = document.querySelectorAll("input");
+        var btn = document.getElementById('btn');
+
+        
+        btn.addEventListener('click', function () {
+
+            var count = 0;
+            var data = [];
+
+            for (var i = 0; i < seat.length; i++) {
+                if (seat[i].checked == true) {
+                    count++;
+                    data.push(seat[i].value);
+                }
+            }
+            if (count < 1) {
+                alert('최소 1개 이상의 좌석을 선택해주세요!')
+            } else {
+                // alert(count + '개의 좌석이 예약되었습니다.')
+            }
+            var result = JSON.stringify({arr:data});
+            console.log(data)
+            count = 0;
+        })
+
+    </script>
+
+    <!-- 쌤 -->
+
+</script>
+
+<h3>
+    예약버튼 클릭시 좌석이 최소한개이상 체크되어있지 않다면 <br>
+    경고창을 띄우는 코드를 작성하세요.<br>
+    또한 체크된 태그의 값은 JSON형태의 문자열로 포장해보세요
+</h3>
+
+<form>
+    좌석:
+    <input type="checkbox" name="seat2" value="1">1
+    <input type="checkbox" name="seat2" value="2">2
+    <input type="checkbox" name="seat2" value="3">3
+    <input type="checkbox" name="seat2" value="4">4
+    <input type="checkbox" name="seat2" value="5">5
+    <input type="checkbox" name="seat2" value="6">6
+    <input type="checkbox" name="seat2" value="7">7
+
+    <br>
+    <button type="button" id="btn2">예약</button>
+</form>
+
+
+<script>
+
+    // var seat2 = document.getElementsByTagName("seat2");
+    var seat2 = document.querySelectorAll("input[name='seat2']");
+
+    var btn2 = document.getElementById("btn2");
+    btn2.onclick = function(){
+        
+        var arr = new Array(); //빈배열
+        var bool = true;
+
+        for(var i = 0; i < seat2.length; i++){
+            // console.log(seat[i]);
+            // console.log(seat[i].checked);
+            
+            if(seat2[i].checked === true){
+                bool=false; //체크되어 있음
+                arr.push(seat2[i].value);//좌석번호
+            }
+        }
+        if(bool){ //true였으면 체크가 x
+            alert("좌석체크는 필수 입니다.")
+        }else{
+            var obj = JSON.stringify({data : arr});
+        }
+
+        console.log(arr)
+    }
+
+
+    
+
+</script>
+
+
+
+
+</body>
+
+</html>

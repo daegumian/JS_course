@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //JS는 선언구문의 순서가 아주 중요하다.
+        //중괄호 실수를 아주 조심해야한다.
+        
+        //window는 화면에서 1개만 쓸 수 있다.
+        //기능은? 화면 html로드가 끝난 이후 실행됨.
+        window.onload = function () {
+
+            var btn = document.getElementById("btn");
+            console.log(btn)
+            
+            btn.onclick = function () {
+                console.log("어랄랄?")
+            }
+
+        }
+    </script>
+    <button id="btn">기본 이벤트</button>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h3>이벤트 객체 - 이벤트가 발생되면, 이벤트 함수 안으로 자동으로 이벤트 객체를 전달해 준다.</h3>
+
+
+    <button id="btn">이벤트객체 확인</button>
+
+    <script>
+        var btn = document.getElementById("btn");
+        btn.onclick = function(e){
+            
+            //console.log(event); //이벤트에 관련한 정보가 있음 (첫번째 매개변수로 넣어주도록 약속 되어있다.)
+            console.log(e);
+            console.log(e.target);
+        }
+
+    </script>
+
+<h3>버튼으로 눌러서 처리하게 아니라, 동일한 태그 여러개에 대해서 즉시 반영?</h3>
+
+    <p class="title"></p>
+
+    <ul class="box">
+        <li>1. 동훈</li>
+        <li>2. 강유</li>
+        <li>3. 관우</li>
+        <li>4. 조조</li>
+        <li>5. 마초</li>
+    </ul>
+
+    <script>
+
+        //반복문으로 다중이벤트 걸기
+        var li = document.querySelectorAll(".box > li");
+
+        // console.log(li[0]);
+        for (var i = 0; i < li.length; i++) {
+
+            /* (function (a) {
+                li[a].onclick = function () {
+
+                    console.log(li[a].innerHTML);
+                }
+            })(i); */ //클로저 사용. 방법1 //var변수 말고 let변수를 써도 된다. 방법2
+
+            li[i].onclick = function () {
+                // console.log(this);
+                // console.log(event.target);
+
+                document.querySelector(".title").innerHTML = event.target.innerHTML;
+            }
+
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>

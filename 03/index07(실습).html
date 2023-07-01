@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>css속성 변경하기</h3>
+    
+    <img src="/img/1.jpg" alt="이미지" class="season" width="300" style="border: 3px solid #000;">
+    <br>
+    <select class="sel" >
+        <option value="1.jpg">봄</option>
+        <option value="2.jpg">여름</option>
+        <option value="3.jpg">가을</option>
+        <option value="4.jpg">겨울</option>
+    </select>
+
+    변경할 색상 : <input type="color" class="col">
+
+    <!-- <script>
+        var btn = document.getElementById("btn");
+        var sel = document.querySelector(".sel"); //옵션을 통째로 가지고 옴 //(document는 문서 전체를 뜻한다.)
+        // var option = sel.querySelectorAll("option"); //select태그에서 탐색.
+        var season = document.querySelector(".season")
+        var col = document.querySelector(".col")//input color
+
+        sel.addEventListener('change', function(){
+            
+            season.src = '/img/'+sel.value;
+            season.style.border = "3px solid"+col.value;
+
+        })
+
+    </script> -->
+
+    <!-- 쌤 -->
+
+    <h3>css속성 변경하기</h3>
+    
+    <img src="/img/1.jpg" alt="이미지" class="img" width="300" style="border: 3px solid #000;">
+    <br>
+    <select class="sel">
+        <option value="1.jpg">봄</option>
+        <option value="2.jpg">여름</option>
+        <option value="3.jpg">가을</option>
+        <option value="4.jpg">겨울</option>
+        
+    </select>
+    <input type="color" class="col">
+
+    
+    <script>
+        var img = document.querySelector(".img");
+        var sel = document.querySelector(".sel");
+        var col = document.querySelector(".col");
+
+        sel.onchange = function(){
+          img.src = '/img/'+sel.value;  
+        }
+        col.onchange = function(){
+            img.style.border = "3px solid" + col.value;
+        }
+
+
+
+    </script>
+
+    
+
+
+
+
+
+    
+</body>
+</html>

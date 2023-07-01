@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <form name="actionForm">
+
+        <h3>가입창</h3>
+        이름: <input type="text" name="name">
+        번호: <input type="text" name="phone" onblur="phoneFunc()"> <!-- onblur는 포커싱이 빠질때 실행 -->
+        분야:
+        <input type="checkbox" name="check">css
+        <input type="checkbox" name="check">js
+        <input type="checkbox" name="check">html
+
+        <input type="submit" value="확인" id="btn">
+
+
+    </form>
+
+    <script>
+        /* 
+        form태그는 document의 자식중 하나로 유일하게 name속성으로 접근할 수 있다.
+        input태그는 form태그의 자식이어서 다시, name속성으로 접근할 수 있다.
+        */
+        
+        // console.log(document.actionForm);
+        // console.log(document.actionForm.name); // input태그 중 name=name인 속성
+
+
+
+
+        var btn = document.getElementById('btn');
+        btn.onclick = function(){
+
+            event.preventDefault();//고유이벤트 중단
+
+            if(document.actionForm.name.value == '' ){
+                alert('아이디를 입력하세요!')
+                document.actionForm.name.focus();//input태그에 focus!
+                return; //함수종료. 안적으면 계속 아래 함수 진행하기때문!
+            }else if(document.actionForm.phone.value.length != 11){
+                alert('번호는 - 없이 11글자 입니다.');
+                document.actionForm.phone.focus();
+                return;
+            }else{
+                var cnt = 0;
+                var check = document.actionForm.check;//input checkbox들
+                // var check = document.querySelectorAll.('.check')// 쿼리셀렉트all은 name은 인식을 못한다. class,id,
+
+                for(var i = 0; i < check.length; i++){
+                    if(check[i].checked){
+                        cnt++;
+                    }
+                }
+                
+                if(cnt == 0){
+                    alert('적어도 1개 이상의 분야를 선택하세요!');
+                    return;
+                }
+            }
+
+            //폼.submit();
+            document.actionForm.submit();
+
+
+
+        }
+
+        function phoneFunc(){
+            console.log(1);
+
+            // document.actionForm.phone.value = document.actionForm.phone.value.replaceAll('-', '');//js문자열함수 구글링보기
+            var phone = document.querySelector("input[name='phone']");
+            phone.value = phone.value.replaceAll('-','');
+        }
+
+
+
+    </script>
+
+    
+
+</body>
+
+</html>

@@ -9,7 +9,6 @@
 
 
     <script>
-
         //렉시컬 스코프 - 함수의 선언위치에 따라서 사용하는 변수가 달라진다.
         //나랑 가장 가까운 변수를 가져다 쓴다.
 
@@ -65,7 +64,7 @@
         var result = example(); //exaple() 반환은 함수
 
         var result2 = result();
-        console.log(result2) //a값 return된 함수가 기억하고 있다. 그 함수가 a값을 계속 가지고 있다.
+        console.log(result2) //1 //a값 return된 함수가 기억하고 있다. 그 함수가 a값을 계속 가지고 있다.
 
         console.log('---------------------------------------------------');
 
@@ -80,32 +79,29 @@
         //     var count = 0;
         //     return ++count;
         // }
-        // console.log( compute())
-        // console.log( compute())
-        // console.log( compute())
-        // console.log( compute())
-        // console.log( compute())
+        // console.log( compute())//1
+        // console.log( compute())//1
+        // console.log( compute())//1
+        // console.log( compute())//1
+        // console.log( compute())//1
 
         //클로저를 이용한 getter
         var compute = function(){
             var count = 0;
 
             return function(){
-                return ++count;
+                return ++count; //실행되고 있던 환경을 기억하고 있음! -> 이것이 렉시컬 스코프 개념.
             }
         }
 
         var x = compute();
         console.log(x)  
         
-        console.log(x());
-        console.log(x());
-        console.log(x());
-        console.log(x());
-        console.log(x());
-
-
-
+        console.log(x());//1
+        console.log(x());//2
+        console.log(x());//3
+        console.log(x());//4
+        console.log(x());//5
 
     </script>
 

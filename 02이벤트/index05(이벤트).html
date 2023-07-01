@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 버튼의 이벤트의 값을 가져오는 방법 -->
+    <button onclick="check(this)">버튼의 이벤트</button> <!-- this는 자기 자신(태그)다. -->
+    <script>
+        function check(a){
+            
+            //console.log(a)
+            // console.log(a.innerHTML);//사이값을 태그형태로 얻음
+            a.innerHTML = "얍!"; //나중에 아이디 중복확인 뭐 이런거에 활용할 수 있겠다?
+        };
+    </script>
+
+    <button id="btn">이벤트 함수안에서 this</button>
+    <script>
+        //js에서 this의 의미 - 선언된 위치에 따라서 달라진다.(렉시컬스코프)
+        var a = 1;
+        function aaa(){
+            var a = 10;
+            console.log(this); //widow객체
+            console.log(a); //지역변수 a // 10
+            console.log(this.a); //전역변수 a // 1
+        }
+        aaa();
+
+        //이벤트 함수안에서 this
+        var btn = document.getElementById("btn");
+        btn.onclick = function(){
+
+            console.log(this); //태그 자기자신
+            //헷갈리면 출력한 다음에 확인 사용.
+        }
+    </script>
+</body>
+</html>

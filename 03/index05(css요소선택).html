@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="box">
+        <li>박스1</li>
+        <li>박스1</li>
+        <li>박스1</li>
+    </ul>
+    
+    <button id="btn">css변경하기</button>
+
+    <script>
+
+        // var li = document.querySelector(".box li"); //이건 첫번째 li이만 먹인다.
+        var li = document.querySelectorAll(".box li"); //for문을 돌려서 전체에 style 속성을 먹인다
+        
+        var btn = document.getElementById("btn");
+        btn.onclick = function(){
+
+            
+            // li.style.color = 'red';
+            // li.style.backgroundColor = 'blue';
+            for(var i = 0; i < li.length; i++){
+                li[i].style.color = 'red';
+                li[i].style.backgroundColor = 'blue';
+            }
+        }
+
+    </script>
+</body>
+</html>

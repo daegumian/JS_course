@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <strong>스크립트의 강력한 기능 이벤트</strong>
+
+    <button onclick="check2(this)" id="a">1</button>
+    <button onclick="check2(this)" id="b">2</button>
+    <button onclick="check2(this)" id="c">3</button>
+    <button onclick="check2(this)" id="d">4</button>
+    
+    <script>
+        function check2(a){
+            console.log(a.id);
+            a.innerHTML = a.id;
+        }
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h3>css문법으로 엘리먼트 얻기</h3>
+    <ul class="box">
+        <li>안녕</li>
+        <li>hello</li>
+        <li>bye</li>
+    </ul>
+
+    <button id="btn">쿼리셀럭터</button>
+    <script>
+        //
+        var btn = document.querySelector("#btn"); //css문법에서의 아이디 표기 방법 #아이디
+        // var li = document.querySelector(".box li");//안녕 // 첫번째껏만 받아옴.
+        var li = document.querySelectorAll(".box li"); //모든 list 배열로 받아옴 -> 반복문으로 출력해야함.
+        
+        btn.addEventListener('click', function(){
+
+            for(var i = 0; i < li.length; i++){
+                //console.log(li[i]);
+                li[i].innerHTML = "바꼈쥬?"
+            }
+
+        });
+    </script>
+    
+</body>
+</html>
