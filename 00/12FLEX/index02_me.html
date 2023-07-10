@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+<body>
+    
+    <!-- 주축 정렬 -->
+
+    <style>
+        .container {
+
+            display: flex;
+            flex-direction: column; /*justify content는  주축에 따라서  정렬이 바뀜 */ 
+
+            justify-content: center;
+            justify-content: space-around;  /* 균등간격 */
+            justify-content: space-between; /* 양끝으로 딱붙이고 동일한 간격 */
+
+            background-color: yellow;
+            padding: 20px;
+            height: 500px;
+        }
+        .container .item {
+            background-color: blue;
+            margin: 10px;
+        }
+
+    </style>
+
+
+    <div class="container">
+        <div class="item">flex</div>
+        <div class="item">flex</div>
+        <div class="item">flex</div>
+    </div>
+
+    <hr/>
+
+
+    <style>
+        .container2 {
+
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            /* 교차축 정렬 (2줄 이상일 때)*/
+            align-content: flex-start;
+            align-content: flex-end;
+            align-content: center;
+            align-content: space-between; /* 양끝 붙이고 균등간격 */
+            align-content: space-around; /*균등 간격*/
+
+            background-color: yellow;
+            padding: 20px;
+            height: 500px;
+        }
+        
+        .container2 .item {
+            background-color: blue;
+            margin: 10px;
+        }
+
+    </style>
+
+
+    <div class="container2">
+        <div class="item">flex</div>
+        <div class="item">flex</div>
+        <div class="item">flex</div>
+        <div class="item">flex</div>
+        <div class="item">flex</div>
+        <div class="item">flex</div>
+        <div class="item">flex</div>
+        <div class="item">flex</div>
+        <div class="item">flex</div>
+        <div class="item">flex</div>
+        <div class="item">flex</div>
+        <div class="item">flex</div>
+        <div class="item">flex</div>
+        <div class="item">flex</div>
+        <div class="item">flex</div>
+        <div class="item">flex</div>
+        
+    </div>
+
+    <hr/>
+
+    <style>
+        .container3 {
+
+            display: flex;/* 한줄이니까 flex-direction,flex-wrap 없음 */
+
+            /* 교차축 정렬(한줄 일때) */
+            align-items: stretch;
+            align-items: flex-start;
+            align-items: end;
+            align-items: center;
+            align-items: baseline;/* 글자 기준으로 교차축정렬을 맞춤 */
+            
+
+            background-color: yellow;
+            padding: 20px;
+            height: 500px;
+        }
+        
+        .container3 .item {
+            background-color: blue;
+            margin: 10px;
+        }
+
+    </style>
+
+
+    <div class="container3">
+        <div class="item" style="height: 50px; line-height: 50px;">flex</div>
+        <div class="item">flex</div>
+        <div class="item">flex</div>
+      
+        
+    </div>
+
+    <hr/>
+
+
+    <style>
+        .box {
+            background-color: pink;
+            height: 100vh; /* 브라우저 크기만큼의 크기 */
+
+            display: flex;
+            justify-content: center;/* 주축 정렬 */
+            align-items: center;/* 교차 축1줄 정렬 */
+        }
+
+    </style>
+
+
+    <div class="box">
+
+        <div>정 가운데로</div> 
+
+    </div>
+
+</body>
+</html>

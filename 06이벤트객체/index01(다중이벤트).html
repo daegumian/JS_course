@@ -11,7 +11,6 @@
 
     <h3>이벤트 객체 - 이벤트가 발생되면, 이벤트 함수 안으로 자동으로 이벤트 객체를 전달해 준다.</h3>
 
-
     <button id="btn">이벤트객체 확인</button>
 
     <script>
@@ -22,7 +21,6 @@
             console.log(e);
             console.log(e.target);
         }
-
     </script>
 
 <h3>버튼으로 눌러서 처리하게 아니라, 동일한 태그 여러개에 대해서 즉시 반영?</h3>
@@ -47,7 +45,6 @@
 
             /* (function (a) {
                 li[a].onclick = function () {
-
                     console.log(li[a].innerHTML);
                 }
             })(i); */ //클로저 사용. 방법1 //var변수 말고 let변수를 써도 된다. 방법2
@@ -55,14 +52,9 @@
             li[i].onclick = function () {
                 // console.log(this);
                 // console.log(event.target);
-
                 document.querySelector(".title").innerHTML = event.target.innerHTML;
             }
-
-
         }
-
-
     </script>
 
 </body>

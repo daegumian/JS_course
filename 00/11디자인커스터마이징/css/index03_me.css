@@ -1,0 +1,102 @@
+.detail-info{
+    min-height: 345px
+}
+
+.detail-info .title{
+    font-size: 24px;
+}
+
+.detail-info .price{
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    font-size: 30px;
+    padding: 10px 0;
+}
+.detail-info .delivery{
+    color: #888;
+    
+}
+
+.detail-control{
+    
+}
+
+.detail-control .price{
+    overflow: hidden;
+}
+
+.price .right{
+    font-size: 30px;
+    font-weight: bold;
+}
+.price .left{
+    font-size: 18px;
+    line-height: 45px;
+}
+
+
+.left{ float: left;}
+.right{ float: right;}
+
+.order button{width: 50%; font-size: 18px; }
+.order .left{
+    background-color: white;
+    color: black;
+    border-color: #ddd;
+    height: 60px;
+    font-size: 18px
+}
+.order .right{
+    height: 60px;
+    font-size: 18px
+}
+
+/* 댓글1 */
+
+.reply-wrap{
+    background-color: #f5f5f5;
+    padding: 15px;
+    border: 1px solid #ddd;
+    position: relative;
+}
+
+.reply-img{
+    position: absolute;
+    left: 15px;
+    top: 15px;
+}
+
+.reply-content{
+    overflow: hidden;
+    padding-left:60px;
+}
+.reply-content textarea{
+    resize: vertical;
+    width: 100%;
+    min-height: 80px; 
+    margin-bottom: 10px;
+}
+
+.reply-content .form-control{
+    overflow: hidden;
+}
+
+.reply-wrap .reply-content button{
+    float: right;
+    margin: 5px 0;
+    display: block;
+    width: 100px;
+    background-color: skyblue;
+    border-radius: 0;
+    
+}
+.reply-wrap > .reply-content .left{
+    display: block;
+    width: 200px;
+    float: left;
+}
+
+.reply-wrap .reply-content .a {
+    display: block;
+    width: 200px;
+}

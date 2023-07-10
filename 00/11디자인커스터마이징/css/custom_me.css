@@ -1,0 +1,242 @@
+/* 다지인 시작전에 공통적으로 선언 */
+
+*{padding: 0; margin: 0; box-sizing: border-box;}
+
+body, html{
+    font-family: 'Nanum Gothic', sans-serif;
+}
+img{
+    max-width: 100%;
+}
+ul,li,ol,dd,dl{
+    list-style: none;
+}
+input,textarea,select,button{
+    /* 브라우저 별로 기본 디자인들을 제거해서 동일한 디자인으로 보여질 수 있게 선언 */
+    -webkit-appearance:none;
+    -moz-appearance: none;
+    appearance: none;
+    /* border:none; */
+}
+
+.form-control{border-radius: 0;}
+.btn {border-radius: 0;}
+
+
+/* ############ header ############# */
+
+.my-header{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 50;
+    
+}
+
+.my-nav {
+    background-color: black;
+    border-radius: 0;
+    margin: 0;
+    
+}
+.my-nav .navbar-nav > li > a {
+    color: orange;
+}
+
+.my-nav .navbar-nav > li > a:hover{
+    background-color: deeppink;
+}
+
+
+.my-nav .navbar-brand {padding: 0 20px; }
+.my-nav .navbar-brand img {
+    height: 50px;
+}
+
+.my-article{margin-top: 50px;}
+
+.carousel-control.right{
+    background-image: linear-gradient(to right,rgba(0,0,0,0) 0,rgba(0,0,0,0) 100%);
+}
+.carousel-control.left{
+    background-image: linear-gradient(to left,rgba(0,0,0,0) 0,rgba(0,0,0,0) 100%);
+}
+
+/* ㄹㄹㄹ */
+
+.prod-list {padding: 5px; border: 1px solid #777;}
+.prod-list > li[class*="col-"]{
+    padding: 5px; /* li 태그중 class속성에 col-이 붙은 것 다 padding 0 */
+}
+
+.prod-link{
+    display: block;
+    border: 1px solid #777;
+    text-align: center;
+    position: relative;
+}
+
+.prod-link > .arrow {
+    position: absolute;
+    left: 30px;
+    bottom: 20px;
+    color: white;
+    background-color: #ddd;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+}
+
+.prod-link > .hover{
+    position: absolute;
+    left: 30px;
+    bottom: 20px;
+    color: white;
+    background-color: yellowgreen;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    opacity: 0;
+
+}
+
+.prod-link:hover > .arrow {
+    opacity: 0;
+}
+.prod-link:hover > .hover{
+    opacity: 1;
+}
+
+.prod-link:hover{
+    border-color: yellowgreen;
+}
+
+
+/* blog */
+.prod-blog { 
+    border: 1px solid #ddd;
+    display: block;
+    text-align: center;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    z-index: 50px;
+}
+.prod-blog > .blog-content {
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: bold;
+    min-height: 60px;
+    height: 60px;
+    color: black;
+}
+.prod-blog > .star{
+    float: left;
+    color :#FDCC11;
+    font-size: 15px;
+    
+}
+
+
+.prod-blog > .price{
+    float: right;
+}
+
+@media(min-width:1200px) {
+    .blog-style > li[class*="col-lg-2"] {
+        width: 20%;
+    }
+}
+
+
+.prod-blog > .detail{
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: bold;
+    background-color: black;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.prod-blog > .detail_hover{
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: bold;
+    background-color: black;
+    
+}
+
+
+.prod-blog:hover > .detail {
+    opacity: 0;
+}
+.prod-blog:hover > .detail_hover{
+    opacity: 1;
+}
+
+.prod-blog:hover{
+    border-color: yellowgreen;
+}
+
+.prod-blog > .star{
+    position: relative;
+}
+
+
+/* 쌤 */
+.blog-wrap > .inner {
+    border: 1px solid#ddd;
+    position: relative;
+  }
+  .blog-wrap .blog-content {
+    padding: 10px;
+  }
+  .blog-wrap .blog-content > p {
+    font-weight: 800;
+    font-size: 15px;
+    height: 60px;
+    overflow: hidden;
+  }
+  .blog-price {
+    overflow: hidden;
+  }
+  .blog-price .left {
+    float: left;
+    overflow: hidden;
+  }
+  .blog-price .right {
+    float: right;
+  }
+  .blog-price .left > li {
+    float: left;
+    color: yellow;
+  }
+  .blog-hover-content {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+  }
+  .blog-wrap .inner:hover > .blog-hover-content {
+    opacity: 1;
+  }
+  @media (min-width: 1200px) {
+
+    .blog-wrap.col-lg-2 {
+        width: 20%;
+    }
+}
+ 

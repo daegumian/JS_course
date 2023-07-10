@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{padding: 0; margin: 0;}
+        ul,li{list-style: none;}
+        .list{overflow: hidden; 
+            width: 800px; border: 1px solid #777; 
+            margin: 0 auto;} /* overflow:hiden은 float 법칙 or 넘어가는 상자(요소)를 숨김. */
+
+        .list li{ 
+            float: left; 
+            width: 25.0000%; 
+            border: 1px solid #777; 
+            box-sizing: border-box; 
+            height: 100px; }
+
+        .list .pos{
+            background-color: violet;
+            position: relative; /* 내가 있는 현재 위치(상대적 위치)에서 z축으로 올린다. */
+            left: 10px;
+            top: 10px;
+        }
+        .list .abs{
+            background-color: red;
+            position: absolute;
+            right: 30px;;
+            bottom: 30px;
+        }
+
+        .top-btn{
+            position: absolute;
+            right: 100px;
+            bottom: 100px;
+            background-color: aqua;
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+        }
+
+
+    </style>
+
+</head>
+<body>
+     <ul class="list" >
+        <li style="position: relative;" >박스
+            <p class="abs">포지션</p> </li>
+        <li>박스</li>
+        <li >박스</li>
+        
+        <li>박스
+            <p class="pos">포지션</p>
+        </li>
+    
+     </ul>
+     <article class="top-btn" >
+        TOP
+     </article>
+     
+
+</body>
+</html>

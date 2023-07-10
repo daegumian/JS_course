@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="popup.html"></script>
+    
+    <!-- 팝업 기능 -->
+    <script src="popup.js"></script>
+
+</head>
+
+<body>
+
+    <input type="checkbox" id="checkBox" >오늘 하루 이 창을 열지 않기
+    
+
+    <!-- <script>
+        var checkBox = document.getElementById("checkBox");
+
+        checkBox.onclick = function () {
+
+            console.log(checkBox.checked);
+
+            if (checkBox.checked == true) {
+                document.cookie = 'xxx=aaa123; expires=' + new Date(2023, 7, 5).toUTCString() + ";";
+                window.close();
+            }
+        }
+
+    </script> -->
+
+    <!-- 쌤 -->
+
+    <script>
+
+        var checkBox = document.getElementById("checkBox");
+        checkBox.onclick = function () {
+
+            //쿠키 생성
+            addCookie('main_popup', true);
+
+            window.close();
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

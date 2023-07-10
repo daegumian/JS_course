@@ -1,0 +1,149 @@
+
+section .wrap{width: 1008px; margin: 0 auto;}
+
+section .content{overflow: hidden;}
+section .list-wrap{width: 480px; float: left;}
+section .slide-wrap{width: 236px; float: left;}
+section .user-wrap{width: 280px; float: left;}
+
+.list-wrap ul {overflow: hidden;}
+.list-wrap ul li {float: left; width: 33.3333%; position: relative;}
+
+.list-wrap ul li a{position: relative;}
+.list-wrap ul li a .singer{
+    position: absolute; 
+    bottom: 4px; 
+    left: 0;
+    width: 100%;
+    color: #fff;
+    background-color: black;
+    text-align: center;
+    font-size: 11px;
+    height: 22px;
+    line-height: 22px;
+    opacity: 0.7;
+}
+
+.list-wrap ul li .hover-cont{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 155px;
+    height: 155px;
+
+    background-color: black;
+    opacity: 0; /* 호버가 닿으면 1로 변경 */
+    z-index: 10; /* 가장 위쪽으로 올림 */
+    transition: opacity 0.5s ease-in-out;
+    
+}
+
+/* 호버 어려운 방법 중 하나. 참고할 것.*/
+.list-wrap ul li:hover > .hover-cont{
+    opacity: 1;
+    
+    
+}
+
+.list-wrap ul li .hover-cont a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 500;
+    font-size: 15px;
+    display: inline-block;
+    width: 100%;
+    padding-top: 50px;
+    text-align: center;
+}
+
+/*  */
+.slide-wrap{margin-left: 4px;}
+
+
+.user-wrap{margin-left: 8px; height: 118px;}
+.user-wrap > .login-wrap{
+    border: 1px solid #ddd;
+}
+.user-wrap > .promotion-wrap{
+    margin-top: 8px;
+}
+
+/* header */
+
+#header{margin: 0 auto; width: 100%; border-top: 3px solid green;}
+#header .wrap { margin: 0 auto; overflow: hidden; border-bottom: 1px solid lightgrey; }
+#header .wrap .top{ overflow: hidden; width: 1008px; margin: 0 auto; color:gray}
+#header .wrap .top .top_left{ float: left; font-size: 10px; margin:10px 0;}
+#header .wrap .top .top_right{ float: right;}
+#header .wrap .top .top_right > ul{overflow: hidden;}
+#header .wrap .top .top_right > ul > li{
+    float: left; 
+    border-right: 1px solid grey; 
+    margin: 10px;
+    padding-right: 15px;
+    font-size: 10px;
+    text-align: center;
+}
+
+.mid { overflow: hidden; width: 1008px; margin: 0 auto;}
+.wrap .mid > .search{
+    float: left; 
+    width: 100px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.kkk{
+    float: left;
+    background-image: url(/img3/melon_search.png);
+    height: 40px;
+    width: 323px;
+    margin: 30px 0 0 11px;
+    border: none;
+    overflow: hidden;
+}
+.mid_btn { 
+    float: right;
+    height: 40px;
+    width: 45px;
+    border: none;
+    cursor: pointer;
+    background-image: url(/img3/melon_btn.png);
+    }
+
+    .kkk input[type="text"]{
+        float: left;
+        width: 260px;
+        height: 25px;
+        margin: 7px 0 0 18px;
+        border: 0;
+    }
+ 
+.bottom {overflow: hidden; width: 1008px; margin: 0 auto;}
+.bottom .bottom_menu{float: left; overflow: hidden;}
+.bottom .bottom_menu li{ display: inline;}
+.bottom .bottom_menu li a{
+    float: left; 
+    box-sizing: border-box; 
+    display: inline-block;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 700;
+    color: #000;
+    text-decoration: none;
+    width: 75px;
+    height: 40px;
+    
+
+}
+.bottom .mymusic {float: right;
+    box-sizing: border-box; 
+    display: inline-block;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 700;
+    color: #000;
+    text-decoration: none;
+    width: 75px;
+    height: 40px;}
+
+.

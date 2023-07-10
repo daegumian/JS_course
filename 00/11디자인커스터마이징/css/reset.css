@@ -1,0 +1,31 @@
+/*디자인 시작시 기본 선언*/
+*{  /* 기본선언: 마딩, 패딩 0, 요소크기에 padding, border값을 포함 x*/
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    min-width: 320px;
+    font-family:'Noto Sans KR', sans-serif; /*웹폰트 사용*/
+}
+
+img {
+    max-width: 100%; /*사이즈가 변해도 넓이를 유지 */
+    height: auto; /*사이즈가 변해도 높이를 유지 */
+    /* vertical-align: top; */
+}
+input, textarea, button, select { 
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    border:none
+}
+ul, ol, dl, li {
+        list-style:none; /*순서 요소들이 리스트스타일을 업앤다 */
+}        
+.btn {
+    border-radius : 0px;
+}
+

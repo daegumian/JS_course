@@ -6,7 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-
     <div>
         <div class="box">
             <div>
@@ -31,7 +30,6 @@
             </div>
         </div>
     </div>
-
     <script>
         var box = document.querySelector(".box");
         box.onclick = function(){
@@ -41,23 +39,11 @@
             // console.log(event.target.classList.contains('sel'));
 
             if(event.target.classList.contains('sel')){//셀렉트 버튼
-
                 event.target.previousElementSibling.style.color = 'pink'
-
             }else if(event.target.classList.contains('del')){//딜리트 버튼
-
                 event.target.parentElement.remove();
-
             }
-
         }
-
     </script>
-
-
-
 </body>
-
-
-
 </html>

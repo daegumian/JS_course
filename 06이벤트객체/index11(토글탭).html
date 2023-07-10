@@ -68,7 +68,7 @@
 
     </section>
 
-    <!-- <script>
+    <!-- <script>//나
         /*
         1. ul에 이벤트 버블링을 이용해서 클릭이벤트를 걸고 클릭되는 타겟의 data-id를 얻습니다.
         2. toggle-menu의 active속성을 삭제
@@ -106,48 +106,36 @@
                         toggle3.classList.add('active');
                     }
                 } */
-
-
     </script> -->
 
     <!-- 쌤 -->
-
     <script>
-
         /*
         1. ul에 이벤트 버블링을 이용해서 클릭이벤트를 걸고 클릭되는 타겟의 data-id를 얻습니다.
         2. toggle-menu의 active속성을 삭제
         3. data-id의 값에 알맞는 태그에 active속성을 추가하면됩니다.
         */
-        
+
         var toggle = document.querySelector('.toggle');
         toggle.onclick = function () {
-            
             if (event.target.tagName != 'LI') {
                 return;
             }
-            
-            
             //1.ul에 이벤트 버블링을 이용해서 클릭이벤트를 걸고 클릭되는 타겟의 data-id를 얻습니다.
             var toggle_menu = document.querySelectorAll('.toggle-menu');
             var target = event.target.dataset.id;
             var result = document.querySelector(target);
             console.log(result)
+            console.log(toggle_menu); //querySelectorAll이 걸려 있으니 배열이 생김
 
             //2. toggle-menu의 active속성을 삭제
-            for(var i = 0; i < toggle_menu.length; i++){
-                toggle_menu[i].classList.remove("active");
+            for (var i = 0; i < toggle_menu.length; i++) {//생긴 배열을 for문을 돌려 조건에 맞는걸 찾기
+                toggle_menu[i].classList.remove("active");//있던 곳에 actve 삭제
             }
 
             //3. data-id의 값에 알맞는 태그에  active속성을 추가하면 된다.
-            result.classList.add('active');
+            result.classList.add('active');//있던 곳에 activ 삭제. 선택 곳에 actㅑve 추가.
         }
-
-
     </script>
-
-
-
 </body>
-
 </html>

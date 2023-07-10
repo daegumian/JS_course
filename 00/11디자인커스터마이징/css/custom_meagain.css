@@ -1,0 +1,113 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;        
+}
+
+body, html{
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+
+img{ /* 모든 이미지 파일을 보더 안에 꽉채우기 위한? */
+    max-width: 100%;
+    height: auto;
+}
+
+ul, li, ol, dd, dl{/* 기본적인 리스트 스타일을 기본 값으로 하기 위한 */
+    list-style: none;
+}
+
+input, textarea, select, button{
+    /* 브라우저 별로 기본디자인을 제거해서 동일한 디자인으로 보여질 수 있도록 선언 */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* border: none; */
+}
+
+.form-control, .btn{ border-radius: 0;}
+
+/*  header  */
+.my-header{
+    width: 100%; /* 일단 너비만 100%로 정해본다. */
+
+}
+
+.my-nav{ /* 제일 위에 있으니까 margin은 0으로 border도 다른 특성은 필요없이 생성만. */
+    background-color: black;
+    border: none;
+    border-radius: 0;
+    margin: 0;
+}
+
+.my-nav .navbar-nav > li > a{/* 메뉴의 글씨 색 내가 지정. */
+    color: orange;
+}
+
+/* hover효과는 마지막에 */
+/* .my-nav .navbar > li */
+
+.my-nav .navbar-brand {padding: 0 20px} /* melon사진 로고 크기 맞추기 위한 패딩*/
+.my-nav .navbar-brand img{ /* melon사진 로고 크기 맞추기 위한 */
+    height: 50px;
+}
+
+/* article */
+
+/* .my-article {margin-top: 50px;} */ /* 헤더와 거리를 약간 띄우기 위한? 왜 마진탑을 줬을까? */
+
+.carousel-control.right{ /* 캐로셀 양 옆 그림자 없애기 -> f12눌러서 찾아서 변경 삭제! */
+    background-image: linear-gradient(to right,rgba(0,0,0, 0) 0,rgba(0,0,0,0) 100%);
+}
+.carousel-control.left{
+    background-image: linear-gradient(to left,rgba(0,0,0, 0) 0,rgba(0,0,0,0) 100%);
+}
+
+/* section */
+
+.prod-list {padding: 5px; border: 1px solid #ddd;} /* 사진 제일 바깥 상자 상자선은 보이지 않게*/
+.prod-list > li[class*="col"]{
+    padding: 5px; /* li태그 중 class속성에 col-이 포함된 태그 */
+}
+
+.prod-link{
+    border: 1px solid #ddd;
+    display: block; /* a태그는 인라인이니까 block으로 만들어 줘서 스타일속성 주기 */
+    text-align: center; /* 자세히 보기 텍스트의 중앙 정렬을 위해 */
+    position: relative; /* <버튼과 자세히보기 버튼의 position absolute를 위해 */
+}
+
+/* 자세히 보기 버튼  */
+
+.prod-link > .arrow{
+    position: absolute; /* 버튼 위치 조정 */
+    left: 20px;
+    bottom: 20px;
+    color: white;
+    background-color: yellowgreen;
+    width: 40px;
+    height: 40px;
+    line-height: 40px; /* 중앙 정렬을 위한 */
+}
+
+.prod-link > .hover{
+    position: absolute; /* 버튼 위치 조정 */
+    left: 20px;
+    bottom: 20px;
+    color: white;
+    background-color: #4285F4;
+    width: 100px;
+    height: 40px;
+    line-height: 40px; /* 중앙 정렬을 위한 */
+    opacity: 0; /* 후버 효과를 감추기 위한 */
+}
+.prod-link:hover > .arrow {
+    opacity: 0;
+}
+.prod-link:hover > .hover {
+    opacity: 1;
+}
+.prod-link:hover {
+    border-color: yellowgreen;
+}

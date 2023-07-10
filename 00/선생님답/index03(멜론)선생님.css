@@ -1,0 +1,139 @@
+header {border-top: 3px solid #00d344;}
+header .wrap { border-bottom: 1px solid #ddd;}
+header .wrap .top {width: 1008px; margin: 0 auto; overflow: hidden;}
+header .wrap .top .top-left {float: left; padding: 10px 8px; font-size: 12px; color: #777;}
+header .wrap .top .top-right {float: right;}
+
+
+.top-right ul li {display: inline; border-left: 1px solid #ddd;}
+.top-right ul li a {display: inline-block; padding: 10px 8px; font-size: 12px; text-decoration: none; color: #777; }
+
+
+header .wrap .mid {width: 1008px; margin: 0 auto; overflow: hidden;}
+.wrap .mid .left {float: left;}
+.wrap .mid .right {float: right; margin-top: 10px;}
+.wrap .mid fieldset {
+    width: 330px;
+    height: 40px;
+    margin: 36px 0 0 11px;
+    background-image: url('img_melon/melon_search.png');
+    border: none;
+    overflow: hidden;
+}
+.wrap .mid fieldset > input {
+    float: left;
+    width: 260px;
+    height: 25px;
+    margin: 7px 0 0 18px;
+    border: none;
+}
+.wrap .mid fieldset > button {
+    float: right;
+    height: 40px;
+    width: 45px;
+    background-image: url('img_melon/melon_btn.png');
+    background-color: #fff;
+    border: none;
+}
+
+.wrap .bot {overflow: hidden; width: 1008px; margin: 0 auto;}
+.wrap .bot .main-gnb {float: left;}
+.wrap .bot .sub-gnb {float: right;}
+
+.main-gnb li,
+.sub-gnb li {display: inline-block;}
+
+.main-gnb li a,
+.sub-gnb li a {display: block; color: #000; text-decoration: none; padding: 10px 5px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ####################################
+###############section################# */
+section .wrap {width: 1008px; margin: 0 auto; }
+
+section .content {overflow: hidden;}
+section .content .list-wrap {width: 480px; float: left;}
+section .content .slide-wrap {width: 236px; float: left;}
+section .content .user-wrap {width: 280px; float: left;}
+
+/* 이미지의 가수명 영역 */
+.list-wrap ul {overflow: hidden;}
+.list-wrap ul li {float: left; width: 33.3333%; position: relative;}
+.list-wrap ul li a {position: relative;}
+.list-wrap ul li a .singer {
+    position: absolute;
+    left: 0;
+    bottom: 4px;
+    width: 100%;
+    color: #fff;
+    background-color: black;
+    text-align: center;
+    font-size: 11px;
+    height: 22px;
+    line-height: 22px;
+    opacity: 0.9;
+}
+.list-wrap ul li .hover-cont {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 155px;
+    height: 155px;
+
+    background-color: black;
+    opacity: 0; /* 호버가 닿으면 1로 변경 */
+    z-index: 10; /* 가장 위쪽 */
+
+    transition: opacity .5s ease-in-out;
+}
+/* 호버 */
+.list-wrap ul li:hover > .hover-cont {
+    opacity: 1;
+}
+
+
+.list-wrap ul li .hover-cont a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+
+    display: inline-block;
+    width: 100%;
+    padding-top: 50px;
+    text-align: center;
+}
+
+/*  */
+.slide-wrap {margin-left: 4px;}
+
+
+.user-wrap {margin-left: 8px; height: 118px;}
+.user-wrap > .login-wrap {
+    border: 1px solid #ddd;
+    height: 118px;
+}
+.user-wrap > .promotion-wrap {
+    margin-top: 8px;
+}

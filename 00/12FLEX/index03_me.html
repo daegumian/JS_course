@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <style>
+
+        .container{
+            display: flex;
+            align-items: flex-start;
+            height: 100vh;
+            background-color: yellowgreen;
+            padding: 20px;
+        }
+
+        .container .item{ /* item의 속성이라 여기 선언 */
+            background-color: orange; 
+            /*flex-basis: 33.3333%; */
+
+        }
+        /* basis = 기본너비, grow = 기본너비에서 증가되는 비율, shrink = 기본너비로 감소되는 비율 */
+        .container .item1{
+            /* flex-basis: 50px; flex-grow: 1; flex-shrink: 1; */
+            flex : 1 1 50px;
+            order : 10;
+        
+        }
+        .container .item2{
+            flex-basis: 50px; flex-grow: 2; flex-shrink: 2;
+            order : -1;
+            align-self: center;/* 얼라인 개별 정렬! */
+        }
+        .container .item3{
+            flex-basis: 50px; flex-grow: 3; flex-shrink: 2;
+            order : 5;
+            align-self: end;
+        }
+
+
+    </style>
+
+    <div class="container">
+        <div class="item item1">1</div>
+        <div class="item item2">2</div>
+        <div class="item item3">3</div>
+    </div>
+
+
+</body>
+</html>

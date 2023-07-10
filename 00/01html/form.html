@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- 폼 태그는 서버에 사용자의 입력데이터를 전달할 때 사용-->
+    <!-- input, textare, select 등은 name 속성이 반드시 필요합니다. (변수명) -->
+
+    <form action="https://www.google.com">
+        <h3>입력 양식</h3>
+        아이디 : <input type="text" name="id" size="5" placeholder="힌트"><br/>
+        비밀번호 : <input type="password" name="pw" size="5" placeholder="비밀번호"><br/>
+        수량 : <input type="number" name="count" placeholder="수량"><br/>
+        날짜 : <input type="date" name="start_dt" placeholder="날짜"><br/>
+
+        시군구선택 (name은 변수명이 됨. name으로 그룹화)
+        <input type="checkbox" name="gu">강남구
+        <input type="checkbox" name="gu">관악구
+        <input type="checkbox" name="gu">금천구
+        <input type="checkbox" name="gu">구로구
+
+        <br/>
+        전공
+        <input type="radio" name="lec"> 경영
+        <input type="radio" name="lec"> 컴퓨터
+        <input type="radio" name="lec"> 수학
+        <input type="radio" name="lec"> 통계
+
+        <br/>
+        <select name="telecom"> <!-- 채크박스랑 비슷하지만 조금 다른 형태로 보여줄 뿐 -->
+            <option>SKT</option>
+            <option>KT</option>
+            <option>LGU+</option>
+            <option>알뜰SKT</option>
+            <option>알뜰KT</option>
+            <option>알뜰LGU</option>
+        </select>
+
+        <br/>
+        글
+        <br/>
+        <textarea name="topic" rows="5" cols="90"></textarea>
+
+        <br/>
+        <input name="file" type="file" >
+        <br/><!-- 여기서는 value속성에 명칭을 적음 -->
+        <input type="reset" value="진짜 초기화함? 함.">
+        <br/> <!-- 폼태그 전부를 서버로 전송할 때 사용 -->
+        <input type="submit" value="데이터 보냄? 보냄">
+
+    </form>
+
+
+</body>
+</html>

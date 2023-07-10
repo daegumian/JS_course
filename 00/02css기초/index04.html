@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 가상선택자는 특정 동작에서 디자인이 적용된다.-->
+
+    <style>
+        /* 마우스 오버시 */
+        .a1 > li > a:hover {color: red;}
+
+        /* 포커스시 */
+        .a2 > input:focus {border-color: violet; outline: none;}
+
+        /* 클릭시 */
+        .a3:active {color: red;}
+    </style>
+
+</head>
+<body>
+    <ul class="a1">
+        <li><a href="">목록</a> </li>
+        <li><a href="">목록</a> </li>
+        <li><a href="">목록</a> </li>
+        <li><a href="">목록</a> </li>
+    </ul>
+    
+    <div class="a2">
+        <input type="text">
+    </div>
+
+    <div class="a3">
+        엑티브
+    </div>
+</body>
+</html>

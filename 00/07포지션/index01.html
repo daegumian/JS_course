@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{padding:0; margin:0;}
+        .list{margin: 0 auto; width: 500px;}
+        p{
+            
+            border: 1px solid #777;
+            height: 100px;
+           
+        }
+        /* 두번째 규칙은 - 포지션의 위치기반이 될 부모태그에 relative 선언 */
+        .content {
+            position: relative;
+        }
+        .a1 {background-color: yellow;}
+        .a2 {
+            background-color: red;
+            /* 첫번째 규칙은 - absolute로 올린다. */
+            position: absolute; /* 절대좌표 기준(body영역)으로 z축으로 끌어올린다 */
+            left :0;
+        }
+        .a3 {background-color: blue;}
+
+    </style>
+
+</head>
+<body>
+    <div class="list">
+        <div class="content">
+            <p class="a1">포지션</p>
+            <p class="a2">포지션</p>
+            <p class="a3">포지션</p>
+        </div>
+    </div>
+</body>
+</html>

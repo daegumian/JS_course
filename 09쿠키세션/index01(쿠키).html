@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    쿠키이름: <input type="text" id="cookieName">
+    쿠키값: <input type="text" id="cookieValue">
+    <button id="createCookie">쿠키생성</button>
+    찾을쿠키: <input type="text" id="cookieFind">
+    <button id="findCookie">쿠키찾기</button>
+    지울쿠키: <input type="text" id="cookieDel">
+    <button id="delCookie">쿠키삭제</button>
+    <script>
+        //쿠키를 생성하는 규칙 (키=값; expires=시간;)
+        document.cookie = 'xxx=aaa123; expires=' + new Date(2023, 7 , 4).toUTCString() + ";";
+        function addCookie(){
+            var name = document.getElementById("cookieName").value;
+            var value = document.getElementById("cookieValue").value;
+            //만료시간
+            var date = new Date(); //현재시간
+            date.setDate( date.getDate() + 7 ); //현재시간 + 7일
+
+            var cookie = "";
+            cookie += name + "=" + value + "; " ;
+            cookie += 'expires=' + date.toUTCString() + "; path=/";
+            document.cookie = cookie; //쿠키생성!!!!
+        }
+        //쿠키 생성이벤트
+        var createCookie = document.getElementById("createCookie");
+        createCookie.onclick = addCookie;
+        //쿠키찾기
+        function getCookie(){
+            var cookieFind = document.getElementById('cookieFind');
+            var find = cookieFind.value;
+            // console.log(document.cookie);
+            var arr = document.cookie.split("; ");// '; '기준으로 분리
+            if(arr.length != 0){
+                for(var i = 0; i < arr.length; i++){
+                    if(arr[i].indexOf(find + '=') != -1){
+                        // console.log('aaa키가 있음');
+                        console.log('키: ' + find); //쿠키값
+                        console.log('값: ' + arr[i].replace(find + '=', '')); //쿠키값
+                    }
+                }
+            }
+        }
+        var findCookie = document.getElementById("findCookie");
+        findCookie.onclick = getCookie;
+        //쿠키삭제 = 동일한 키로 expires를 현재시간으로 맞춤
+        var delCookie = document.getElementById('delCookie');
+
+        delCookie.onclick = function(){
+            var cookieDel = document.getElementById('cookieDel');
+            var kkk = cookieDel.value;
+            var date = new Date(); //현재시간
+            var arr = document.cookie.split("; ");
+            if(arr.length != 0){
+                for(var i = 0; i < arr.length; i++){
+                    if(arr[i].indexOf(kkk + '=') != -1){
+                        // console.log('aaa키가 있음');
+                        console.log('키: ' + kkk); //쿠키값
+                        console.log('값: ' + arr[i].replace(kkk + '=', '')); //쿠키값
+                        document.cookie = kkk + '=' + arr[i].replace(kkk + '=', '') + ';' + 'expires=' + new Date().toUTCString() + ";";
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

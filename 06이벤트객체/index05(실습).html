@@ -55,28 +55,15 @@
             </tr>
         </tbody>
     </table>
-
     <script>
-
         var list = document.querySelector(".list");
-
         var btn = document.querySelectorAll("button");
-
         list.onclick = function(){
-
             if(event.target.tagName != 'BUTTON'){
                 return;
             }
-            
             event.target.parentElement.parentElement.remove();
-
         }
-        
-        
-
-
-
-
     </script>
 
 

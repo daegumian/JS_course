@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button id="btn">다음 데이터 가져오기</button>
+
+
+    <script>
+
+        var btn = document.getElementById("btn");
+        btn.onclick = function () {
+
+            pageNum++;
+            ajax(pageNum);
+            
+        };
+
+        function ajax(page) {
+
+            //js는 함수로 묶어주는 것이 좋다.
+            //api key
+            //586d514b70616c6639374d51526368
+
+            //1일때 1~10, 2일때 11~20, 3일때 21~30
+            var end = page * 10;
+            var start = end - 9;
+
+            fetch('http://openapi.seoul.go.kr:8088/586d514b70616c6639374d51526368/json/bikeList/' + start + '/' + end + '/')
+                .then(function (response) {
+                    return response.json();
+                }).then(function (result) {
+                    console.log(result);
+                });
+        };
+
+        //즉시실행함수 최초 1번호출
+        var pageNum = 1;
+
+        (function () {
+            ajax(pageNum);
+        })();
+
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

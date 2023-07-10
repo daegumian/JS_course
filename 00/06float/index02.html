@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        
+
+        .box{
+            width: 800px;
+            margin: 0 auto;
+            overflow: hidden;/* float의 부모영역 */
+            border: 1px solid #777;
+        }
+
+        .box > .card {
+            float: left;
+            width: 25%;
+            border: 1px solid #777;
+            box-sizing: border-box;
+
+        }
+
+        
+
+        .content {
+            
+            float: left;
+        }
+
+        .content { overflow: hidden;}
+        .content .left{float: left;}
+        .content .right{float: right;}
+
+        .btn-area{overflow: hidden}
+        .btn-area .left{flex:left; width: 100%;}
+        .btn-area .right{flex:right; width: 100%;}
+    </style>
+
+</head>
+<body>
+    <div class="box">
+        <div class="card">
+            <img src="/img/물고기.png" alt="상품">
+            <div class="content"><!-- 글영역(부모영역) -->
+                <ul class="left">
+                    <li>좌측</li>
+                    <li>좌측</li>
+                    <li>좌측</li>
+                </ul>
+                <strong class="right">우측</strong>
+            </div>
+            <!-- float의 영역을 받지 않게 함. -->
+            가격영역
+            <div>
+                <div>
+                    <button class="left">장바구니</button>
+                    <button class="right">구매하기</button>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            박스1
+        </div>
+        <div class="card">
+            박스1
+        </div>
+        <div class="card">
+            박스1
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,159 @@
+header .wrap {
+    border-bottom: 1px solid#ddd;
+  }
+  header .wrap .top {
+    width: 1008px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  header .wrap .top .top-left {
+    float: left;
+  }
+  header .wrap .top .top-right {
+    float: right;
+  }
+  .top-right ul li {
+    display: inline-block;
+  }
+  .top-right ul li a {
+    display: block;
+    padding: 5px 10px;
+    font-size: 13px;
+    text-decoration: none;
+    color: #333;
+  }
+  /* ********************************* */
+  /* section 영역 */
+  section .wrap {
+    width: 1008px;
+    margin: 0 auto;
+  }
+  section .content {
+    overflow: hidden;
+  }
+  section .content .list-wrap {
+    width: 480px;
+    float: left;
+  }
+  section .content .slide-wrap {
+    width: 236px;
+    float: left;
+  }
+  section .content .user-wrap {
+    width: 280px;
+    float: left;
+  }
+  .list-wrap ul {
+    overflow: hidden;
+  }
+  .list-wrap ul li {
+    float: left;
+    width: 33.3333%;
+    position: relative;
+  }
+  .list-wrap ul li a {
+    position: relative;
+  }
+  .list-wrap ul li a .singer {
+    position: absolute;
+    left: 0;
+    bottom: 4px;
+    width: 100%;
+    text-align: center;
+    font-size: 11px;
+    background-color: black;
+    color: #fff;
+    height: 22px;
+    line-height: 22px;
+    opacity: 0.7;
+  }
+  .list-wrap ul li .hover-cont {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 156px;
+    height: 155px;
+    background-color: black;
+    opacity: 0; /* hover 시에 1로 변경 */
+    z-index: 10; /* 가장 위로 올림 */
+  
+    transition: opacity 0.5s ease-in-out;
+  }
+  .list-wrap ul li .hover-cont a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    display: inline-block;
+    width: 100%;
+    padding-top: 50px;
+    text-align: center;
+  }
+  /* hover */
+  .list-wrap ul li:hover > .hover-cont {
+    opacity: 0.7;
+  }
+  /* slide 영역 */
+  .slide-wrap {
+    margin-left: 4px;
+  }
+  .user-wrap {
+    margin-left: 8px;
+  }
+  
+  .user-wrap > .login-wrap {
+    border: 1px solid #ddd;
+    height: 118px;
+  }
+  .user-wrap > .promotion-wrap {
+    margin-top: 8px;
+  }
+
+  header {border-top: 3px solid green;}
+  header .wrap{border-bottom: 1px solid #ddd;}
+
+  header .wrap .top{width: 1008px; margin: 0 auto; overflow: hidden;}
+  header .wrap .top .top-left{float: left;}
+  header .wrap .top .top-right{float: right;}
+
+  .top-right ul li {display: inline;}
+  .top-right ul li a {display: inline-block; margin: 0 auto; overflow: hidden;}
+
+  header .wrap .mid {width: 1008px; margin: 0 auto; overflow: hidden;}
+  .wrap .mid .left{float: left;}
+  .wrap .mid .right{float: right;}
+  .wrap .mid fieldset{
+    width: 330px;
+    height: 40px;
+    margin: 36px 0 0 11px;
+    background-image: url(/img3/melon_search.png);
+    border: none;
+  }
+
+.wrap .mid fieldset > input {
+    float: left;
+    width: 260px;
+    height: 25px;
+    margin: 6px 0 0 18px;
+    border: none;
+
+}
+.wrap .mid fieldset > button {
+    float: left;
+    height: 40px;
+    width: 45px;
+    background-image: url(/img3/melon_btn.png);
+    background-color: #fff;
+    border: none;
+
+}
+
+.wrap .bot {overflow: hidden; width: 1008px; margin: 0 auto;}
+.wrap .bot .main-gnb {float: left;}
+.wrap .bot .sub-gnb {float: right;}
+
+.main-gnb li,
+.sub-gnb li {display: inline-block;}
+
+.main-gnb li a,
+.sub-gnb li a {display: block; text-decoration: none; padding: 10px 5px; color: black;}

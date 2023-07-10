@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+
+        <style>
+            *{padding: 0; margin: 0;}/*  */
+            ul, li {list-style: none;}
+            
+            .gnb{
+                text-align: center;
+                background-color: aqua;
+            }
+
+            .gnb > li{
+                display: inline-block;
+            }
+
+            .gnb > li > a{
+                /* width: 100px; a태그가 인라인이라서 효과 없음, 블록으로 만들어주면 너비를 줄 수 있음.*/                
+                display: block;
+                width: 100px;
+                height: 100px;
+                line-height: 100px;
+                /* text-align: center; */
+                color: yellow;
+                font-size: 20px;
+                font-weight: 700;
+            }
+            .gnb > li > a:hover {
+                background-color: brown;
+            }
+        </style>
+
+</head>
+<body>
+        <nav class="box">
+            <ul class="gnb">
+                <li><a href="">목록</a></li>
+                <li><a href="">목록</a></li>
+                <li><a href="">목록</a></li>
+                <li><a href="">목록</a></li>
+                <li><a href="">목록</a></li>
+            </ul>            
+        </nav>
+
+
+
+</body>
+</html>

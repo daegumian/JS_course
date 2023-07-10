@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .box{
+            border:0.5px solid #777;
+            width: 500px;
+            /* 자식을 float했으면 감싸줄 부모영역에 둘 중 택1하여 선언 */
+            /* overflow: hidden; */ /*방법 1st */
+
+        }
+        /* 방법 2nd */
+        .box::after{
+            content: ""; display:block; clear:both;
+        }
+
+        .box > div {
+            float: left;
+            width: 25% /*<-부모님 너비에 대해서 1/4 /  내각 직접 계산->125px */;
+            border: 1px solid #777;
+            box-sizing: border-box;/* box-sizing을 안하면 정렬이 무너짐 */
+        
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="box"><!-- ul로 바뀌어도 상관없다. -->
+        <div >박스1</div><!-- 블록이라 밑으로 내려감 -->
+        <div>박스2</div>
+        <div>박스3</div>
+        <div>박스4</div>
+    </div>
+
+    <style>
+        ul, li {padding: 0; margin: 0; list-style: none;} /* 태를 뭘 쓰던 style을 바꾸면 똑같다. */
+        
+        .box2{
+            border: 1px solid #777;
+            width: 500px;
+            overflow: hidden;
+        }
+    
+        .box2 > li {
+            float: right;
+            width: 20%;
+        }
+    </style>
+
+    <ul class="box2">
+        <li>박스1</li>
+        <li>박스2</li>
+        <li>박스3</li>
+        <li>박스4</li>
+        <li>박스5</li>
+    </ul>
+</body>
+</html>

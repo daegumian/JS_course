@@ -21,25 +21,19 @@
     <script>
         var box = document.querySelector('.box');
         box.onclick = function(){
-            
             event.preventDefault(); //고유이벤트 중단
-
             if(event.target.tagName != 'A'){ //A태그 아니라면 중단
                 return;
             }
 
             // event.target.data-info; //사용x
-
             console.dir(event.target);
-            console.log(event.target.dataset['info']);
+            console.log(event.target.dataset['info']);//배열로 되어있다. //접근 방법 1
 
-            var value = event.target.dataset.info;
+            var value = event.target.dataset.info;//배열 접근 방법2
             var obj = JSON.parse(value); //JSON문자열 => 객체
-
             console.log(obj);
         }
-
     </script>
-    
 </body>
 </html>

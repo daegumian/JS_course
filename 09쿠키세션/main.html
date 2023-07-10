@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 팝업 기능 -->
+    <script src="popup.js"></script>
+
+</head>
+
+<body>
+
+    <h3>메인창</h3>
+    <button id="del">쿠키삭제하기</button>
+
+    <!-- <script>
+        //페이지가 시작되면 팝업창을 띄워준다.
+        //사용자가 오늘하루 이창을 열지 않기를 클릭하면 쿠키를 생성하고,
+        //쿠기가 있다면 다음 접속시에는 팝업창을 띄우지 않으면 된다.
+
+        // console.log(document.cookie);
+
+        if(document.cookie == ""){
+            window.open('popup.html', '팝업창', 'width=200px, height=200px ,left=300px,top=300px');
+        }
+
+        //쿠키 삭제하기
+        var cookieDel = document.getElementById("del");
+        cookieDel.onclick = function () {
+            document.cookie = 'xxx=aaa123; expires=' + new Date().toUTCString() + ";";
+        }
+
+    </script> -->
+
+    <!-- 쌤 -->
+
+    <script>
+
+        if( getCookie('main_popup') != true){
+            window.open('popup.html', '팝업창', 'width=300px, height=300px ,left=300px,top=px');
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -30,19 +30,12 @@
 
             // console.dir(event.target.tagName);//이벤트가 동작한 태그명
 
-            if(event.target.tagName != "LI"){
+            if(event.target.tagName != "LI"){ //그곳만 눌러야 된다.
                 return;
             }
-            
             title.innerHTML = event.target.innerHTML;
-
-
-
         }
-
     </script>
-
-
     
 </body>
 </html>

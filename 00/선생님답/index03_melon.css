@@ -1,0 +1,285 @@
+header {border-top: 3px solid #00d344;}
+header .wrap { border-bottom: 1px solid #ddd;}
+header .wrap .top {width: 1008px; margin: 0 auto; overflow: hidden;}
+header .wrap .top .top-left {float: left; padding: 10px 8px; font-size: 12px; color: #777;}
+header .wrap .top .top-right {float: right;}
+
+
+.top-right ul li {display: inline; border-left: 1px solid #ddd;}
+.top-right ul li a {display: inline-block; padding: 10px 8px; font-size: 12px; text-decoration: none; color: #777; }
+
+
+header .wrap .mid {width: 1008px; margin: 0 auto; overflow: hidden;}
+.wrap .mid .left {float: left;}
+.wrap .mid .right {float: right; margin-top: 10px;}
+.wrap .mid fieldset {
+    width: 330px;
+    height: 40px;
+    margin: 36px 0 0 11px;
+    background-image: url('img_melon/melon_search.png');
+    border: none;
+    overflow: hidden;
+}
+.wrap .mid fieldset > input {
+    float: left;
+    width: 260px;
+    height: 25px;
+    margin: 7px 0 0 18px;
+    border: none;
+}
+.wrap .mid fieldset > button {
+    float: right;
+    height: 40px;
+    width: 45px;
+    background-image: url('img_melon/melon_btn.png');
+    background-color: #fff;
+    border: none;
+}
+
+.wrap .bot {overflow: hidden; width: 1008px; margin: 0 auto;}
+.wrap .bot .main-gnb {float: left;}
+.wrap .bot .sub-gnb {float: right;}
+
+.main-gnb li,
+.sub-gnb li {display: inline-block;}
+
+.main-gnb li a,
+.sub-gnb li a {display: block; color: #000; text-decoration: none; padding: 10px 5px;}
+
+
+
+/* ####################################
+###############section################# */
+section .wrap {width: 1008px; margin: 0 auto; }
+
+section .content {overflow: hidden;}
+section .content .list-wrap {width: 480px; float: left;}
+section .content .slide-wrap {width: 236px; float: left;}
+section .content .user-wrap {width: 280px; float: left;}
+
+/* 이미지의 가수명 영역 */
+.list-wrap ul {overflow: hidden;}
+.list-wrap ul li {float: left; width: 33.3333%; position: relative;}
+.list-wrap ul li a {position: relative;}
+.list-wrap ul li a .singer {
+    position: absolute;
+    left: 0;
+    bottom: 4px;
+    width: 100%;
+    color: #fff;
+    background-color: black;
+    text-align: center;
+    font-size: 11px;
+    height: 22px;
+    line-height: 22px;
+    opacity: 0.9;
+}
+.list-wrap ul li .hover-cont {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 155px;
+    height: 155px;
+
+    background-color: black;
+    opacity: 0; /* 호버가 닿으면 1로 변경 */
+    z-index: 10; /* 가장 위쪽 */
+
+    transition: opacity .5s ease-in-out;
+}
+/* 호버 */
+.list-wrap ul li:hover > .hover-cont {
+    opacity: 1;
+}
+
+
+.list-wrap ul li .hover-cont a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+
+    display: inline-block;
+    width: 100%;
+    padding-top: 50px;
+    text-align: center;
+}
+
+/*  */
+.slide-wrap {margin-left: 4px;}
+
+
+.user-wrap {margin-left: 8px; height: 118px;}
+.user-wrap > .login-wrap {
+    border: 1px solid #ddd;
+    height: 118px;
+}
+.user-wrap > .promotion-wrap {
+    margin-top: 8px;
+}
+
+
+
+
+/* ####################################
+###############banner################# */
+/* 메인배너 */
+.wrap .main_banner {margin-top: 20px;}
+
+/* 이슈 */
+
+.wrap .hot_issue {width: 704px; margin-top: 20px; }
+.wrap .hot_issue h4 {border-bottom: 1px solid #999; padding: 5px 0;/* 위아래 좌우 */}
+.wrap .hot_issue h4 span {font-size: 9px; color: #999999;}
+
+.wrap .hot_issue ul {overflow: hidden;}
+.wrap .hot_issue ul li {float: left; width:223px; margin: 16px 0 0 16px;}
+.wrap .hot_issue ul li.m0 {margin-left: 0;}/* m0클래스는 left를 제거 */
+
+.hot_issue .inner a {text-decoration: none;}
+.hot_issue .inner a > span {display: block; margin-top: 5px;}/* a의 바로 하위 자식 */
+.hot_issue .inner .title {font-size: 15px; color: #000;}
+.hot_issue .inner .cont {font-size: 10px; color: #777;}
+.hot_issue .inner .hit {font-size: 10px; color: green; }
+.hot_issue .inner .hit span {color : #777};
+
+/* 차트 */
+.wrap {overflow: hidden;}
+.wrap .hot_issue {float: left;}
+.wrap .chart {
+    width: 280px;
+    float: left;
+    margin-left: 24px;
+    height: 472px;
+    margin-top: 20px;
+}
+.chart h4 {border-bottom: 1px solid #999; padding: 5px 0;/* 위아래 좌우 */}
+.chart .chart_wrap {
+    border: 1px solid #999999;
+    margin-top: 16px;
+}
+.chart .chart_wrap .chart_top {overflow: hidden;}
+.chart .chart_wrap .chart_top {text-align: center;}
+.chart .chart_wrap .chart_top li a {
+    display: block;
+    width: 33.3333%;
+    float: left;
+    text-decoration: none;
+    color: #999;
+    padding: 5px 0;
+    font-size: 14px;
+}
+/* a태그에 tab_link클래스가 있는  경우 border */
+.chart .chart_wrap .chart_top li a.tab_link {
+    border-top: 2px solid #8ac121;
+}
+
+.chart .chart_wrap .chart_rank li {
+    width: 278px;
+    height: 33px;
+    /* line-height: 33px; */
+    border-top: 1px solid #999999;
+    overflow: hidden; /* 부모 */
+}
+.chart .chart_wrap .chart_rank .rank_num,
+.chart .chart_wrap .chart_rank .rank_cnt,
+.chart .chart_wrap .chart_rank .thumb {
+    float: left;
+} 
+.rank_num {width: 34px; font-size: 20px; font-weight: bold; margin: 3px 0 0 8px;}
+.rank_cnt {width: 22px; font-size: 11px; margin: 8px 0 0 8px;}
+.thumb {margin-left: 10px; margin: 3px 0 0 8px;}
+.thumb img{display: none;}/* 이미지숨기기 */
+.rank_name a {text-decoration: none; color: #000;}
+.rank_cont a {text-decoration: none; color: #777;}
+
+/* .on클래스 스타일에 대하여 디자인 */
+
+.chart .chart_wrap .chart_rank li.on {height: 66px;}
+.chart .chart_wrap .chart_rank li.on .rank_num {margin-top: 20px;}
+.chart .chart_wrap .chart_rank li.on .rank_cnt {margin-top: 25px;}
+.chart .chart_wrap .chart_rank li.on .thumb {position:relative; padding: 10px 0 0 60px;}
+.chart .chart_wrap .chart_rank li.on .thumb img {
+    display: inline; 
+    position: absolute;
+    top:8px; left:0px;
+}
+.chart .chart_wrap .chart_rank li.on .rank_info span {
+    display:block;
+}
+/* 
+.chart .chart_wrap .chart_rank li:hover {height: 66px;}
+.chart .chart_wrap .chart_rank li:hover .rank_num {margin-top: 20px;}
+.chart .chart_wrap .chart_rank li:hover .rank_cnt {margin-top: 25px;}
+.chart .chart_wrap .chart_rank li:hover .thumb {position:relative; padding: 10px 0 0 60px;}
+.chart .chart_wrap .chart_rank li:hover .thumb img {
+    display: inline; 
+    position: absolute;
+    top:8px; left:0px;
+}
+.chart .chart_wrap .chart_rank li:hover .rank_info span {
+    display:block;
+}
+ */
+
+
+/* 차트 버튼영역 */
+.chart .chart_btn_area {
+    border-top: 1px solid #999999;
+    overflow: hidden;
+    padding: 6px 8px;
+
+}
+.chart .chart_btn_area > button {float: left; 
+    border:1px solid #999; 
+    background-color: #fbfbfb; 
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+}
+.chart .chart_btn_area > span {float: right;}
+
+.hot_issue {margin-bottom: 50px;}
+/* 아래 공지영역 */
+.notice {overflow: hidden; height: 28px;  padding-top: 10px; border-top: 1px solid #777;}
+.notice .label {float:left; font-size: 11px; font-weight: 900;}
+.notice .content {float:left; font-size: 11px; color:#999; padding-left: 20px;}
+.notice .date {float:left; font-size: 11px; color:#666; padding-left: 10px;}
+
+
+
+/* ####################################
+###############banner################# */
+.footer_wrap {border-top: 1px solid #666;}
+.footer_top {width: 1008px; margin: 0 auto; overflow: hidden;}
+.footer_top .fl_right {float: right;}
+.footer_top .fl_right li {display: inline;}
+.footer_top .fl_right li a{
+    display: inline-block;
+    text-decoration: none;
+    color: #777;
+    font-size: 12px;
+    font-weight: 900;
+    margin-left: 10px;
+    padding: 10px 0px;
+}
+
+.footer_wrap2 {border-top: 1px solid #ddd;}
+.footer_bot { width: 1008px; margin:0 auto;}
+.footer_bot .fl_left {margin-top: 10px;}
+.footer_bot .fl_left li {display: inline;}
+.footer_bot .fl_left li a{
+    display: inline-block;
+    font-size: 10px;
+    color: #777;
+    text-decoration: none;
+    border-right: 1px solid #777;
+    padding-right :5px;
+    height: 10px;
+    line-height: 10px;
+}
+.footer_bot .fl_left li a:hover {
+    border-bottom: 1px solid #777;
+}
+.footer_bot > p {margin: 20px 0 50px 0;}
+.footer_bot > p > strong {font-size: 12px;}
+.footer_bot > p > span {font-size: 10px;color: #777;}

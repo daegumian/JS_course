@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{padding: 0; margin: 0;} /* 처음 꾸미기를 시작할 때는 패딩 마진은 다 없애놓고 시작하는게 좋다 */
+        ul,li{list-style: none;} /* default 값으로 해놓으면 좋음 */
+        img{max-width: 100%; height: auto;} /* default 값으로 해놓으면 좋음 */
+
+        .gnb-box {
+            text-align: center;
+            background-color: #000;
+           
+        }
+
+        .gnb > li{
+            display: inline-block;
+            width: 100px;
+            /* height: 64; border-bottom을 활설화 시 박스크기가 변하는 것 해결 방법 1 */
+        }
+        .gnb > li > a{
+
+            display: block; /* 너비, 높이 지정 */
+            color: white;
+            text-decoration: none;
+            /* height: 80px;
+            line-height: 80px; 이것 대신 패딩으로 가능*/
+            padding: 20px 10px;
+
+            height: 80px;
+            box-sizing: border-box;
+           
+        }
+
+        .gnb > li > a:hover{
+            border-bottom: 3px solid white;
+        }
+
+        section {margin-top: 80px;}
+
+        .box{
+            width: 1000px; /* 박스를 가운데로 보내는 문법 */   
+            margin: 0 auto; /* 박스를 가운데로 보내는 문법 */           
+        }
+
+        .box > .a1 {
+            border: 1px solid #777;
+            padding: 40px;
+        }
+
+    </style>
+
+
+
+</head>
+<body>
+
+    <header>
+        <nav class="gnb-box">
+            <ul class="gnb">
+                <li><a href="">목록</a></li>
+                <li><a href="">목록</a></li>
+                <li><a href="">목록</a></li>
+                <li><a href="">목록</a></li>
+                <li><a href="">목록</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <article>
+        <img src="/img/member.jpg" alt="">
+    </article>
+
+    <section>
+        <div class="box">
+            <h3>오늘의 발견</h3>
+            <div class="a1">
+                본문 내용...<br>
+                본문 내용...<br> 
+                본문 내용...<br>
+                본문 내용...<br>
+                본문 내용...<br>
+                본문 내용...<br>
+                본문 내용...
+            </div>
+        </div>        
+    </section>
+
+</body>
+</html>

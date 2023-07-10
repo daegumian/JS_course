@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            border: 1px solid #777;
+            width: 500px;
+            /* 자식을 float했으면 감싸줄 부모영역에 둘중 택1하여 선언 */
+            /* 1st */
+            /* overflow: hidden; */
+
+        }
+        /* 2nd */
+        .box:after {
+            content: ""; display: block; clear: both;
+        }
+
+        .box > div {
+            float: left;
+            width: 25%; /* 125px; */
+            border: 1px solid #777;
+            box-sizing: border-box;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div class="box">
+        <div>박스1</div>
+        <div>박스2</div>
+        <div>박스3</div>
+        <div>박스4</div>
+    </div>
+
+
+    <style>
+        ul, li {padding: 0; margin: 0; list-style: none;}
+
+        .box2 {
+            border: 1px solid #777;
+            width: 500px;
+            overflow: hidden;
+        }
+
+        .box2 > li {
+            float: right;
+            width: 20%;
+        }
+
+    </style>
+
+    <ul class="box2">
+        <li>박스1</li>
+        <li>박스2</li>
+        <li>박스3</li>
+        <li>박스4</li>
+        <li>박스5</li>
+    </ul>
+
+
+
+
+</body>
+</html>

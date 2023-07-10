@@ -102,11 +102,58 @@
             }
         }
 
-
-
-
-
     </script>
+
+    <!-- 쌤 -->
+
+    <!-- <script>
+
+        var clock = document.querySelector(".clock > h2");
+        var cnt = 0;
+
+        function createImg(){
+
+            //데이터셋에서 값 꺼내오기
+           var data = document.body.dataset.img;
+            var obj = JSON.parse(data);
+
+            //img
+            var img = document.createElement("img");
+            img.src = obj[++cnt];
+            img.classList.add("bgImg");
+
+            console.log(img);
+            document.body.appendChild(img);
+            
+            //초기화(obj의 길이 확인하는 방법.)
+            if(Object.keys(obj).length == cnt){
+                cnt = 0;
+            }
+        }
+
+        function createTime(){
+
+            var date = new Date();
+            var hour = date.getHours();
+            var minute = date.getMinutes();
+            var second = date.getSeconds();
+
+            var result = (hour < 10 ? "0"+ hour : hour) + ":" + 
+                         (minute < 10 ? "0"+ minute : minute) + ":" + 
+                         (second < 10 ? "0"+ second : second);
+            clock.innerHTML = result;
+
+        }
+
+        (function(){ //즉시함수로 모아서 같이 실행.
+            setInterval(createImg, 1000);
+            
+            setInterval(createTime,1000);
+        })();
+
+    </script> -->
+
+
 
 </body>
 

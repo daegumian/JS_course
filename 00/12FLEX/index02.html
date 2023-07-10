@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+<body>
+    
+    <style>
+        .container {
+
+            display: flex;
+            flex-direction: column; /*justify content는  주축에 따라서  정렬이 바뀜 */ 
+
+            justify-content: center;
+            /* space-around;  */ /* 균등간격 */
+            /* space-between; */ /* 양끝으로 딱붙이고 동일한 간격 */
+
+            background-color: yellow;
+            padding: 20px;
+            height: 500px;
+        }
+        .container .item {
+            background-color: blue;
+            margin: 10px;
+        }
+
+    </style>
+
+
+    <div class="container">
+        <div class="item">flex</div>
+        <div class="item">flex</div>
+        <div class="item">flex</div>
+    </div>
+
+
+
+
+</body>
+</html>

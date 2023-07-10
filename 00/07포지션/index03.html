@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0;}
+
+        .box{border: 1px solid #777; width: 800px; height: 500px; position: relative; margin: 0 auto;}
+
+        .box > .inner_bigbox{
+            border: 1px solid #777;
+            width: 650px;
+            height: 400px;
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            margin: 10px;
+        }
+
+        .box > .inner_box {
+            border: 1px solid #777;
+            height: 30px;
+            width: 100%;
+        }
+        .box > .inner_btn{
+            height: 30px;
+            
+            
+            text-align: center;
+            
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="box">
+        <img src="/img/물고기.png" alt="" style="position: absolute; padding-left: 10px; padding-top: 10px;">
+        <textarea class="inner_bigbox">힌트 : 이미지 영역을 position:absolute를 사용합니다.
+텍스트영역은 패딩left를 사용합니다</textarea>
+        <div class="inner_box" style="width: 250px; position: absolute; left: 133px; bottom: 45px;" ></div>
+        <button class="inner_btn" style=" width: 100px; position: absolute; right: 15px; bottom: 45px;">등록하기</button>
+        <div class="inner_box" style="width: 250px; position: absolute; left: 133px; bottom: 10px;"></div>
+    </div>
+    
+</body>
+</html>
